@@ -1,0 +1,6 @@
+|CinnaBoNFPGA
+i_clk => r_led1.CLK
+i_btn1 => r_led1.DATAIN
+o_led1 << r_led1.DB_MAX_OUTPUT_PORT_TYPE
+
+

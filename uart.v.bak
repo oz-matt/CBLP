@@ -1,0 +1,9 @@
+module uart(input wire clk, output reg GPIO3);
+
+reg[31:0] n = 0;
+
+always @(posedge clk) n <= n+1;
+
+assign GPIO3 = n[22];
+
+endmodule
