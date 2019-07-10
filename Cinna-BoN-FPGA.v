@@ -1,11 +1,25 @@
 module CinnaBoNFPGA (
   input wire i_clk,
   input wire i_btn1,
-  output wire o_led1
+  output wire o_led1,
+  output sevled1,
+  output sevled2,
+  output sevled3,
+  output sevled4,
+  output sevled5,
+  output sevled6
 );
 
 reg r_led1 = 1'b0;
 wire w_clean_switch;
+
+reg[3:0] ledcode = 4'b0000;
+wire outcode1;
+wire outcode2;
+wire outcode3;
+wire outcode4;
+wire outcode5;
+wire outcode6;
 
 Debouncer d(
   .i_clk(i_clk),
@@ -13,15 +27,36 @@ Debouncer d(
   .o_clean_switch(w_clean_switch)
 );
 
+SevLedDecoder sev(
+  .i_clk(i_clk),
+  .i_code(ledcode),
+  .o_code1(outcode1),
+  .o_code2(outcode2),
+  .o_code3(outcode3),
+  .o_code4(outcode4),
+  .o_code5(outcode5),
+  .o_code6(outcode6)
+);
+
 always @(posedge i_clk)
 begin
   if(w_clean_switch == 1'b1)
-    r_led1 = 1'b1;
+    r_led1 <= 1'b1;
+	 ledcode <= ledcode + 1;
+	 if(ledcode > 7) ledcode <= 0;
   else
-    r_led1 = 1'b0;
+    r_led1 <= 1'b0;
 end
 
 assign o_led1 = r_led1;
+
+assign sevled1 = outcode1;
+assign sevled2 = outcode2;
+assign sevled3 = outcode3;
+assign sevled4 = outcode4;
+assign sevled5 = outcode5;
+assign sevled6 = outcode6;
+
 
 endmodule
 

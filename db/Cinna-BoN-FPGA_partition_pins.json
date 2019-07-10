@@ -8,6 +8,30 @@
 					"strict" : false
 				},
 				{
+					"name" : "sevled1",
+					"strict" : false
+				},
+				{
+					"name" : "sevled2",
+					"strict" : false
+				},
+				{
+					"name" : "sevled3",
+					"strict" : false
+				},
+				{
+					"name" : "sevled4",
+					"strict" : false
+				},
+				{
+					"name" : "sevled5",
+					"strict" : false
+				},
+				{
+					"name" : "sevled6",
+					"strict" : false
+				},
+				{
 					"name" : "i_clk",
 					"strict" : false
 				},

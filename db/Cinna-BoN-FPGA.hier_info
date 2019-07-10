@@ -2,6 +2,12 @@
 i_clk => i_clk.IN1
 i_btn1 => i_btn1.IN1
 o_led1 << r_led1.DB_MAX_OUTPUT_PORT_TYPE
+sevled1 << SevLedDecoder:sev.o_code1
+sevled2 << SevLedDecoder:sev.o_code2
+sevled3 << SevLedDecoder:sev.o_code3
+sevled4 << SevLedDecoder:sev.o_code4
+sevled5 << SevLedDecoder:sev.o_code5
+sevled6 << SevLedDecoder:sev.o_code6
 
 
 |CinnaBoNFPGA|Debouncer:d
@@ -28,5 +34,44 @@ i_clk => r_ctr[18].CLK
 i_bouncy_switch => always0.IN1
 i_bouncy_switch => r_clean_switch.DATAB
 o_clean_switch <= r_clean_switch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CinnaBoNFPGA|SevLedDecoder:sev
+i_clk => r_code[0].CLK
+i_clk => r_code[1].CLK
+i_clk => r_code[2].CLK
+i_clk => r_code[3].CLK
+i_clk => r_code[4].CLK
+i_clk => r_code[5].CLK
+i_code[0] => Mux0.IN10
+i_code[0] => Mux1.IN10
+i_code[0] => Mux2.IN10
+i_code[0] => Mux3.IN10
+i_code[0] => Mux4.IN10
+i_code[0] => Mux5.IN10
+i_code[1] => Mux0.IN9
+i_code[1] => Mux1.IN9
+i_code[1] => Mux2.IN9
+i_code[1] => Mux3.IN9
+i_code[1] => Mux4.IN9
+i_code[1] => Mux5.IN9
+i_code[2] => Mux0.IN8
+i_code[2] => Mux1.IN8
+i_code[2] => Mux2.IN8
+i_code[2] => Mux3.IN8
+i_code[2] => Mux4.IN8
+i_code[2] => Mux5.IN8
+i_code[3] => Mux0.IN7
+i_code[3] => Mux1.IN7
+i_code[3] => Mux2.IN7
+i_code[3] => Mux3.IN7
+i_code[3] => Mux4.IN7
+i_code[3] => Mux5.IN7
+o_code1 <= r_code[0].DB_MAX_OUTPUT_PORT_TYPE
+o_code2 <= r_code[1].DB_MAX_OUTPUT_PORT_TYPE
+o_code3 <= r_code[2].DB_MAX_OUTPUT_PORT_TYPE
+o_code4 <= r_code[3].DB_MAX_OUTPUT_PORT_TYPE
+o_code5 <= r_code[4].DB_MAX_OUTPUT_PORT_TYPE
+o_code6 <= r_code[5].DB_MAX_OUTPUT_PORT_TYPE
 
 
