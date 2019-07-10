@@ -5,10 +5,17 @@ module CinnaBoNFPGA (
 );
 
 reg r_led1 = 1'b0;
+wire w_clean_switch;
+
+Debouncer d(
+  .i_clk(i_clk),
+  .i_bouncy_switch(i_btn1),
+  .o_clean_switch(w_clean_switch)
+);
 
 always @(posedge i_clk)
 begin
-  if(i_btn1 == 1'b1)
+  if(w_clean_switch == 1'b1)
     r_led1 = 1'b1;
   else
     r_led1 = 1'b0;

@@ -12,7 +12,7 @@ reg [18:0] r_ctr = 0;
 always @(posedge i_clk)
 begin
   if(i_bouncy_switch !== r_clean_switch && r_ctr < clk_cycles_for_good_switch)
-    r_ctr <= r_ctr + 1;
+    r_ctr <= r_ctr + 1'b1;
   else if(r_ctr >= clk_cycles_for_good_switch)
   begin
     r_ctr <= 0;
@@ -23,3 +23,5 @@ begin
 end
 
 assign o_clean_switch = r_clean_switch;
+
+endmodule
