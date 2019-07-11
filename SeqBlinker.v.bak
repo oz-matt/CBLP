@@ -1,0 +1,66 @@
+module SeqBlinker
+  #(parameter n_clks_1hz = 25000000,
+  parameter n_clks_2hz = 12500000,
+  parameter n_clks_3hz = 8333333,
+  parameter n_clks_5hz = 5000000,
+  parameter n_clks_10hz = 2500000)
+  (input i_clk,
+  output reg[4:0] outreg);
+  
+  reg[24:0] ctr_1hz;
+  reg[24:0] ctr_2hz;
+  reg[24:0] ctr_3hz;
+  reg[24:0] ctr_5hz;
+  reg[24:0] ctr_10hz;
+  
+  always @(posedge i_clk)
+  begin
+    ctr_1hz <= ctr_1hz + 1;
+    if (ctr_1hz >= n_clks_1hz)
+	 begin
+	   outreg[0] = ~outreg[0];
+		ctr_1hz <= 0;
+    end
+  end
+  
+  always @(posedge i_clk)
+  begin
+    ctr_2hz <= ctr_2hz + 1;
+    if (ctr_2hz >= n_clks_2hz)
+	 begin
+	   outreg[1] = ~outreg[1];
+		ctr_2hz <= 0;
+    end
+  end
+  
+  always @(posedge i_clk)
+  begin
+    ctr_3hz <= ctr_3hz + 1;
+    if (ctr_3hz >= n_clks_3hz)
+	 begin
+	   outreg[2] = ~outreg[2];
+		ctr_3hz <= 0;
+    end
+  end
+  
+  always @(posedge i_clk)
+  begin
+    ctr_5hz <= ctr_5hz + 1;
+    if (ctr_5hz >= n_clks_5hz)
+	 begin
+	   outreg[3] = ~outreg[3];
+		ctr_5hz <= 0;
+    end
+  end
+  
+  always @(posedge i_clk)
+  begin
+    ctr_10hz <= ctr_10hz + 1;
+    if (ctr_10hz >= n_clks_10hz)
+	 begin
+	   outreg[4] = ~outreg[4];
+		ctr_10hz <= 0;
+    end
+  end
+  
+endmodule

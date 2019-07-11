@@ -1,4 +1,37 @@
-module CinnaBoNFPGA (
+module CinnaBoNFPGA
+  (input i_clk,
+  output wire o_led1,
+  output wire o_led2,
+  output wire o_led3,
+  output wire o_led4,
+  output wire o_led5
+  );
+
+  wire r_leds1;
+  wire r_leds2;
+  wire r_leds3;
+  wire r_leds4;
+  wire r_leds5;
+  
+  SeqBlinker sq
+    (.i_clk(i_clk),
+	 .outreg1(r_leds1),
+	 .outreg2(r_leds2),
+	 .outreg3(r_leds3),
+	 .outreg4(r_leds4),
+	 .outreg5(r_leds5)
+	 );
+	 
+  assign o_led1 = r_leds1;
+  assign o_led2 = r_leds2;
+  assign o_led3 = r_leds3;
+  assign o_led4 = r_leds4;
+  assign o_led5 = r_leds5;
+
+endmodule
+
+
+/*module CinnaBoNFPGA (
   input wire i_clk,
   input wire i_btn1,
   output wire o_led1,
@@ -67,7 +100,7 @@ assign sevled6 = outcode6;
 endmodule
 
 
-
+*/
 
 
 
