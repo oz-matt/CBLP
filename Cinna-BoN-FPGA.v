@@ -2,18 +2,18 @@ module CinnaBoNFPGA (
   input wire i_clk,
   input wire i_btn1,
   output wire o_led1,
-  output sevled1,
-  output sevled2,
-  output sevled3,
-  output sevled4,
-  output sevled5,
-  output sevled6
+  output wire sevled1,
+  output wire sevled2,
+  output wire sevled3,
+  output wire sevled4,
+  output wire sevled5,
+  output wire sevled6
 );
 
 reg r_led1 = 1'b0;
 wire w_clean_switch;
 
-reg[3:0] ledcode = 4'b0000;
+reg[3:0] ledcode;
 wire outcode1;
 wire outcode2;
 wire outcode3;
@@ -42,10 +42,16 @@ always @(posedge i_clk)
 begin
   if(w_clean_switch == 1'b1)
     r_led1 <= 1'b1;
-	 ledcode <= ledcode + 1;
-	 if(ledcode > 7) ledcode <= 0;
+	 //ledcode <= ledcode + 1;
+	 //if(ledcode > 6) ledcode <= 0;
   else
     r_led1 <= 1'b0;
+end
+
+always @(posedge w_clean_switch)
+begin
+	ledcode <= ledcode + 1;
+	if(ledcode > 6) ledcode <= 0;
 end
 
 assign o_led1 = r_led1;

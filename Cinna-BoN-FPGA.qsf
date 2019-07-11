@@ -52,21 +52,7 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_location_assignment PIN_W15 -to LED
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
-set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LED
-set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to clk
-set_instance_assignment -name SLEW_RATE 1 -to LED
 set_global_assignment -name SDC_FILE "Cinna-BoN-FPGA.sdc"
-set_location_assignment PIN_AE17 -to GPIO1
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO1
-set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to GPIO1
-set_instance_assignment -name SLEW_RATE 1 -to GPIO1
-set_location_assignment PIN_AE20 -to GPIO2
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO2
-set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to GPIO2
-set_instance_assignment -name SLEW_RATE 1 -to GPIO2
 set_location_assignment PIN_AA23 -to o_led1
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_led1
 set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to o_led1

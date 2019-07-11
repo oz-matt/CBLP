@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Cinna-BoN-FPGA
-Wed Jul 10 16:53:28 2019
+Thu Jul 11 01:59:59 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,12 +13,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Debouncer:d
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Debouncer:d
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -44,13 +45,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jul 10 16:53:28 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jul 11 01:59:59 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Cinna-BoN-FPGA                              ;
 ; Top-level Entity Name           ; CinnaBoNFPGA                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 31                                          ;
+; Total registers                 ; 30                                          ;
 ; Total pins                      ; 9                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -184,25 +185,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 19          ;
+; Estimate of Logic utilization (ALMs needed) ; 18          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 36          ;
+; Combinational ALUT usage for logic          ; 34          ;
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 1           ;
 ;     -- 5 input functions                    ; 3           ;
-;     -- 4 input functions                    ; 4           ;
-;     -- <=3 input functions                  ; 28          ;
+;     -- 4 input functions                    ; 1           ;
+;     -- <=3 input functions                  ; 29          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 31          ;
+; Dedicated logic registers                   ; 30          ;
 ;                                             ;             ;
 ; I/O pins                                    ; 9           ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_clk~input ;
-; Maximum fan-out                             ; 31          ;
-; Total fan-out                               ; 203         ;
-; Average fan-out                             ; 2.39        ;
+; Maximum fan-out                             ; 27          ;
+; Total fan-out                               ; 190         ;
+; Average fan-out                             ; 2.32        ;
 +---------------------------------------------+-------------+
 
 
@@ -211,11 +212,21 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
-; |CinnaBoNFPGA              ; 36 (5)              ; 31 (5)                    ; 0                 ; 0          ; 9    ; 0            ; |CinnaBoNFPGA                   ; CinnaBoNFPGA  ; work         ;
+; |CinnaBoNFPGA              ; 34 (3)              ; 30 (4)                    ; 0                 ; 0          ; 9    ; 0            ; |CinnaBoNFPGA                   ; CinnaBoNFPGA  ; work         ;
 ;    |Debouncer:d|           ; 24 (24)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |CinnaBoNFPGA|Debouncer:d       ; Debouncer     ; work         ;
 ;    |SevLedDecoder:sev|     ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |CinnaBoNFPGA|SevLedDecoder:sev ; SevLedDecoder ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; ledcode[3]                            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -223,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 31    ;
+; Total registers                              ; 30    ;
 ; Number of registers using Synchronous Clear  ; 19    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -257,23 +268,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 31                          ;
+; arriav_ff             ; 30                          ;
 ;     ENA               ; 6                           ;
 ;     SCLR              ; 19                          ;
-;     plain             ; 6                           ;
-; arriav_lcell_comb     ; 36                          ;
+;     plain             ; 5                           ;
+; arriav_lcell_comb     ; 34                          ;
 ;     arith             ; 19                          ;
 ;         1 data inputs ; 19                          ;
-;     normal            ; 17                          ;
+;     normal            ; 15                          ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 8                           ;
-;         4 data inputs ; 4                           ;
+;         4 data inputs ; 1                           ;
 ;         5 data inputs ; 3                           ;
 ;         6 data inputs ; 1                           ;
 ; boundary_port         ; 9                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.80                        ;
-; Average LUT depth     ; 1.81                        ;
+; Average LUT depth     ; 1.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -292,7 +304,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jul 10 16:53:18 2019
+    Info: Processing started: Thu Jul 11 01:59:49 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Cinna-BoN-FPGA -c Cinna-BoN-FPGA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -303,19 +315,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file debounc
 Info (12021): Found 1 design units, including 1 entities, in source file sevled.v
     Info (12023): Found entity 1: SevLedDecoder File: D:/Cinna-BoN-FPGA/sevled.v Line: 1
 Info (12127): Elaborating entity "CinnaBoNFPGA" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at Cinna-BoN-FPGA.v(45): truncated value with size 32 to match size of target (4) File: D:/Cinna-BoN-FPGA/Cinna-BoN-FPGA.v Line: 45
+Warning (10230): Verilog HDL assignment warning at Cinna-BoN-FPGA.v(53): truncated value with size 32 to match size of target (4) File: D:/Cinna-BoN-FPGA/Cinna-BoN-FPGA.v Line: 53
 Info (12128): Elaborating entity "Debouncer" for hierarchy "Debouncer:d" File: D:/Cinna-BoN-FPGA/Cinna-BoN-FPGA.v Line: 28
 Info (12128): Elaborating entity "SevLedDecoder" for hierarchy "SevLedDecoder:sev" File: D:/Cinna-BoN-FPGA/Cinna-BoN-FPGA.v Line: 39
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 45 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 36 logic cells
+    Info (21061): Implemented 35 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 684 megabytes
-    Info: Processing ended: Wed Jul 10 16:53:28 2019
+    Info: Peak virtual memory: 679 megabytes
+    Info: Processing ended: Thu Jul 11 01:59:59 2019
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:23
 

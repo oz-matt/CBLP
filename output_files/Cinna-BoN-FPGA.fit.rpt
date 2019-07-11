@@ -1,5 +1,5 @@
 Fitter report for Cinna-BoN-FPGA
-Wed Jul 10 16:54:02 2019
+Thu Jul 11 02:00:36 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -11,32 +11,31 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   3. Fitter Settings
   4. Parallel Compilation
   5. Fitter Netlist Optimizations
-  6. Ignored Assignments
-  7. Incremental Compilation Preservation Summary
-  8. Incremental Compilation Partition Settings
-  9. Incremental Compilation Placement Preservation
- 10. Pin-Out File
- 11. Fitter Resource Usage Summary
- 12. Fitter Partition Statistics
- 13. Input Pins
- 14. Output Pins
- 15. I/O Bank Usage
- 16. All Package Pins
- 17. Fitter Resource Utilization by Entity
- 18. Delay Chain Summary
- 19. Pad To Core Delay Chain Fanout
- 20. Control Signals
- 21. Global & Other Fast Signals
- 22. Routing Usage Summary
- 23. I/O Rules Summary
- 24. I/O Rules Details
- 25. I/O Rules Matrix
- 26. Fitter Device Options
- 27. Operating Settings and Conditions
- 28. Estimated Delay Added for Hold Timing Summary
- 29. Estimated Delay Added for Hold Timing Details
- 30. Fitter Messages
- 31. Fitter Suppressed Messages
+  6. Incremental Compilation Preservation Summary
+  7. Incremental Compilation Partition Settings
+  8. Incremental Compilation Placement Preservation
+  9. Pin-Out File
+ 10. Fitter Resource Usage Summary
+ 11. Fitter Partition Statistics
+ 12. Input Pins
+ 13. Output Pins
+ 14. I/O Bank Usage
+ 15. All Package Pins
+ 16. Fitter Resource Utilization by Entity
+ 17. Delay Chain Summary
+ 18. Pad To Core Delay Chain Fanout
+ 19. Control Signals
+ 20. Global & Other Fast Signals
+ 21. Routing Usage Summary
+ 22. I/O Rules Summary
+ 23. I/O Rules Details
+ 24. I/O Rules Matrix
+ 25. Fitter Device Options
+ 26. Operating Settings and Conditions
+ 27. Estimated Delay Added for Hold Timing Summary
+ 28. Estimated Delay Added for Hold Timing Details
+ 29. Fitter Messages
+ 30. Fitter Suppressed Messages
 
 
 
@@ -62,7 +61,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Wed Jul 10 16:54:02 2019       ;
+; Fitter Status                   ; Successful - Thu Jul 11 02:00:36 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Cinna-BoN-FPGA                              ;
 ; Top-level Entity Name           ; CinnaBoNFPGA                                ;
@@ -70,7 +69,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CSEBA6U23I7                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 19 / 41,910 ( < 1 % )                       ;
-; Total registers                 ; 32                                          ;
+; Total registers                 ; 31                                          ;
 ; Total pins                      ; 9 / 314 ( 3 % )                             ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
@@ -152,14 +151,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.1%      ;
-;     Processor 4            ;   0.1%      ;
+;     Processor 2            ;   0.3%      ;
+;     Processor 3            ;   0.2%      ;
+;     Processor 4            ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -169,30 +168,8 @@ refer to the applicable agreement for further details.
 ; Node               ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node     ; Destination Port ; Destination Port Name ;
 +--------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------+------------------+-----------------------+
 ; i_clk~inputCLKENA0 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                      ;                  ;                       ;
-; ledcode[3]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ledcode[3]~DUPLICATE ;                  ;                       ;
+; ledcode[1]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ledcode[1]~DUPLICATE ;                  ;                       ;
 +--------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------+------------------+-----------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Ignored Assignments                                                                            ;
-+------------------+----------------+--------------+------------+---------------+----------------+
-; Name             ; Ignored Entity ; Ignored From ; Ignored To ; Ignored Value ; Ignored Source ;
-+------------------+----------------+--------------+------------+---------------+----------------+
-; Location         ;                ;              ; GPIO1      ; PIN_AE17      ; QSF Assignment ;
-; Location         ;                ;              ; GPIO2      ; PIN_AE20      ; QSF Assignment ;
-; Location         ;                ;              ; LED        ; PIN_W15       ; QSF Assignment ;
-; Current Strength ; CinnaBoNFPGA   ;              ; GPIO1      ; 16MA          ; QSF Assignment ;
-; Current Strength ; CinnaBoNFPGA   ;              ; GPIO2      ; 16MA          ; QSF Assignment ;
-; Current Strength ; CinnaBoNFPGA   ;              ; LED        ; 16MA          ; QSF Assignment ;
-; Current Strength ; CinnaBoNFPGA   ;              ; clk        ; 16MA          ; QSF Assignment ;
-; I/O Standard     ; CinnaBoNFPGA   ;              ; GPIO1      ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard     ; CinnaBoNFPGA   ;              ; GPIO2      ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard     ; CinnaBoNFPGA   ;              ; LED        ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard     ; CinnaBoNFPGA   ;              ; clk        ; 3.3-V LVTTL   ; QSF Assignment ;
-; Slew Rate        ; CinnaBoNFPGA   ;              ; GPIO1      ; 1             ; QSF Assignment ;
-; Slew Rate        ; CinnaBoNFPGA   ;              ; GPIO2      ; 1             ; QSF Assignment ;
-; Slew Rate        ; CinnaBoNFPGA   ;              ; LED        ; 1             ; QSF Assignment ;
-+------------------+----------------+--------------+------------+---------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -201,8 +178,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 87 ) ; 0.00 % ( 0 / 87 )          ; 0.00 % ( 0 / 87 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 87 ) ; 0.00 % ( 0 / 87 )          ; 0.00 % ( 0 / 87 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 84 ) ; 0.00 % ( 0 / 84 )          ; 0.00 % ( 0 / 84 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 84 ) ; 0.00 % ( 0 / 84 )          ; 0.00 % ( 0 / 84 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -225,7 +202,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 87 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 84 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -243,12 +220,12 @@ The pin-out file can be found in D:/Cinna-BoN-FPGA/output_files/Cinna-BoN-FPGA.p
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 19 / 41,910        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 19                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 21 / 41,910        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 14                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 5                  ;       ;
-;         [c] ALMs used for registers                         ; 2                  ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 25 / 41,910        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 9                  ;       ;
+;         [b] ALMs used for LUT logic                         ; 10                 ;       ;
+;         [c] ALMs used for registers                         ; 6                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 41,910         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 41,910         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41,910         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -257,24 +234,24 @@ The pin-out file can be found in D:/Cinna-BoN-FPGA/output_files/Cinna-BoN-FPGA.p
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 3 / 4,191          ; < 1 % ;
-;     -- Logic LABs                                           ; 3                  ;       ;
+; Total LABs:  partially or completely used                   ; 5 / 4,191          ; < 1 % ;
+;     -- Logic LABs                                           ; 5                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 37                 ;       ;
+; Combinational ALUT usage for logic                          ; 35                 ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
 ;     -- 6 input functions                                    ; 1                  ;       ;
 ;     -- 5 input functions                                    ; 3                  ;       ;
-;     -- 4 input functions                                    ; 4                  ;       ;
-;     -- <=3 input functions                                  ; 29                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
+;     -- 4 input functions                                    ; 1                  ;       ;
+;     -- <=3 input functions                                  ; 30                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 8                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 32                 ;       ;
+; Dedicated logic registers                                   ; 31                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 31 / 83,820        ; < 1 % ;
+;         -- Primary logic registers                          ; 30 / 83,820        ; < 1 % ;
 ;         -- Secondary logic registers                        ; 1 / 83,820         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 31                 ;       ;
+;         -- Design implementation registers                  ; 30                 ;       ;
 ;         -- Routing optimization registers                   ; 1                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
@@ -330,12 +307,12 @@ The pin-out file can be found in D:/Cinna-BoN-FPGA/output_files/Cinna-BoN-FPGA.p
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 1              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.2% / 0.2% / 0.2% ;       ;
-; Maximum fan-out                                             ; 32                 ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.0% / 0.1% / 0.0% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.9% / 1.0% / 0.7% ;       ;
+; Maximum fan-out                                             ; 26                 ;       ;
 ; Highest non-global fan-out                                  ; 19                 ;       ;
-; Total fan-out                                               ; 206                ;       ;
-; Average fan-out                                             ; 2.34               ;       ;
+; Total fan-out                                               ; 201                ;       ;
+; Average fan-out                                             ; 2.16               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -346,12 +323,12 @@ The pin-out file can be found in D:/Cinna-BoN-FPGA/output_files/Cinna-BoN-FPGA.p
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 19 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 19                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 21 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 14                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 5                    ; 0                              ;
-;         [c] ALMs used for registers                         ; 2                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 25 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 9                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 10                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 6                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41910 ( 0 % )    ; 0 / 41910 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -360,27 +337,27 @@ The pin-out file can be found in D:/Cinna-BoN-FPGA/output_files/Cinna-BoN-FPGA.p
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 3 / 4191 ( < 1 % )   ; 0 / 4191 ( 0 % )               ;
-;     -- Logic LABs                                           ; 3                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 5 / 4191 ( < 1 % )   ; 0 / 4191 ( 0 % )               ;
+;     -- Logic LABs                                           ; 5                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 37                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 35                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                    ; 0                              ;
 ;     -- 6 input functions                                    ; 1                    ; 0                              ;
 ;     -- 5 input functions                                    ; 3                    ; 0                              ;
-;     -- 4 input functions                                    ; 4                    ; 0                              ;
-;     -- <=3 input functions                                  ; 29                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 0                    ; 0                              ;
+;     -- 4 input functions                                    ; 1                    ; 0                              ;
+;     -- <=3 input functions                                  ; 30                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 8                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
-;         -- Primary logic registers                          ; 31 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
+;         -- Primary logic registers                          ; 30 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
 ;         -- Secondary logic registers                        ; 1 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
-;         -- Design implementation registers                  ; 31                   ; 0                              ;
+;         -- Design implementation registers                  ; 30                   ; 0                              ;
 ;         -- Routing optimization registers                   ; 1                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
@@ -398,8 +375,8 @@ The pin-out file can be found in D:/Cinna-BoN-FPGA/output_files/Cinna-BoN-FPGA.p
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 206                  ; 0                              ;
-;     -- Registered Connections                               ; 81                   ; 0                              ;
+;     -- Total Connections                                    ; 201                  ; 0                              ;
+;     -- Registered Connections                               ; 75                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -432,7 +409,7 @@ The pin-out file can be found in D:/Cinna-BoN-FPGA/output_files/Cinna-BoN-FPGA.p
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; i_btn1 ; Y24   ; 5B       ; 89           ; 25           ; 3            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
-; i_clk  ; V11   ; 3B       ; 32           ; 0            ; 0            ; 32                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; i_clk  ; V11   ; 3B       ; 32           ; 0            ; 0            ; 27                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -1159,9 +1136,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name   ; Library Name ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------+---------------+--------------+
-; |CinnaBoNFPGA              ; 19.0 (3.5)           ; 20.0 (3.7)                       ; 1.0 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 37 (6)              ; 32 (6)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 9    ; 0            ; |CinnaBoNFPGA                   ; CinnaBoNFPGA  ; work         ;
-;    |Debouncer:d|           ; 12.2 (12.2)          ; 13.0 (13.0)                      ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 24 (24)             ; 20 (20)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CinnaBoNFPGA|Debouncer:d       ; Debouncer     ; work         ;
-;    |SevLedDecoder:sev|     ; 3.3 (3.3)            ; 3.3 (3.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CinnaBoNFPGA|SevLedDecoder:sev ; SevLedDecoder ; work         ;
+; |CinnaBoNFPGA              ; 18.5 (1.7)           ; 25.0 (3.8)                       ; 6.5 (2.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 35 (4)              ; 31 (5)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 9    ; 0            ; |CinnaBoNFPGA                   ; CinnaBoNFPGA  ; work         ;
+;    |Debouncer:d|           ; 13.2 (13.2)          ; 17.7 (17.7)                      ; 4.5 (4.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 24 (24)             ; 20 (20)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CinnaBoNFPGA|Debouncer:d       ; Debouncer     ; work         ;
+;    |SevLedDecoder:sev|     ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |CinnaBoNFPGA|SevLedDecoder:sev ; SevLedDecoder ; work         ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1178,7 +1155,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sevled4 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; sevled5 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; sevled6 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; i_clk   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; i_clk   ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; i_btn1  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +---------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -1189,21 +1166,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                 ; Pad To Core Index ; Setting ;
 +-------------------------------------+-------------------+---------+
 ; i_clk                               ;                   ;         ;
+;      - Debouncer:d|r_clean_switch   ; 1                 ; 0       ;
 ; i_btn1                              ;                   ;         ;
 ;      - Debouncer:d|r_clean_switch~0 ; 0                 ; 0       ;
 ;      - Debouncer:d|always0~0        ; 0                 ; 0       ;
 +-------------------------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                            ;
-+-------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                          ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Debouncer:d|always0~0         ; LABCELL_X88_Y9_N51 ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; SevLedDecoder:sev|r_code[0]~0 ; LABCELL_X88_Y9_N6  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; i_clk                         ; PIN_V11            ; 32      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-+-------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                             ;
++-------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                          ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Debouncer:d|always0~0         ; MLABCELL_X87_Y9_N18 ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; Debouncer:d|r_clean_switch    ; FF_X83_Y9_N20       ; 7       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; SevLedDecoder:sev|r_code[0]~0 ; LABCELL_X85_Y9_N36  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; i_clk                         ; PIN_V11             ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; i_clk                         ; PIN_V11             ; 26      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
++-------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -1211,7 +1191,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
-; i_clk ; PIN_V11  ; 32      ; Global Clock         ; GCLK6            ; --                        ;
+; i_clk ; PIN_V11  ; 26      ; Global Clock         ; GCLK6            ; --                        ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1220,14 +1200,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+------------------------+
 ; Routing Resource Type                       ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Block interconnects                         ; 36 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 0 / 13,420 ( 0 % )     ;
-; C2 interconnects                            ; 1 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 9 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 55 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 9 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 20 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 28 / 56,300 ( < 1 % )  ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
-; Direct links                                ; 12 / 289,320 ( < 1 % ) ;
+; Direct links                                ; 15 / 289,320 ( < 1 % ) ;
 ; Global clocks                               ; 1 / 16 ( 6 % )         ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )          ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )          ;
@@ -1283,12 +1263,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )          ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )         ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
-; Local interconnects                         ; 27 / 84,580 ( < 1 % )  ;
+; Local interconnects                         ; 25 / 84,580 ( < 1 % )  ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
-; R14 interconnects                           ; 0 / 12,676 ( 0 % )     ;
-; R14/C12 interconnect drivers                ; 0 / 20,720 ( 0 % )     ;
-; R3 interconnects                            ; 11 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 13 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 27 / 12,676 ( < 1 % )  ;
+; R14/C12 interconnect drivers                ; 35 / 20,720 ( < 1 % )  ;
+; R3 interconnects                            ; 48 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 46 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 1 / 360 ( < 1 % )      ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )     ;
 +---------------------------------------------+------------------------+
@@ -1407,13 +1387,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-; i_clk           ; i_clk                ; 8.3               ;
-+-----------------+----------------------+-------------------+
++-----------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                         ;
++----------------------------+----------------------+-------------------+
+; Source Clock(s)            ; Destination Clock(s) ; Delay Added in ns ;
++----------------------------+----------------------+-------------------+
+; Debouncer:d|r_clean_switch ; i_clk                ; 94.7              ;
+; i_clk                      ; i_clk                ; 12.7              ;
+; i_clk,I/O                  ; i_clk                ; 7.7               ;
++----------------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
@@ -1423,27 +1405,30 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------+-----------------------------+-------------------+
 ; Source Register            ; Destination Register        ; Delay Added in ns ;
 +----------------------------+-----------------------------+-------------------+
-; ledcode[0]                 ; ledcode[3]                  ; 0.312             ;
-; ledcode[2]                 ; ledcode[3]                  ; 0.312             ;
-; Debouncer:d|r_ctr[18]      ; Debouncer:d|r_clean_switch  ; 0.293             ;
-; Debouncer:d|r_ctr[17]      ; Debouncer:d|r_clean_switch  ; 0.293             ;
-; Debouncer:d|r_ctr[16]      ; Debouncer:d|r_clean_switch  ; 0.293             ;
-; Debouncer:d|r_ctr[15]      ; Debouncer:d|r_clean_switch  ; 0.293             ;
-; Debouncer:d|r_ctr[14]      ; Debouncer:d|r_clean_switch  ; 0.293             ;
-; Debouncer:d|r_ctr[13]      ; Debouncer:d|r_clean_switch  ; 0.293             ;
-; ledcode[1]                 ; SevLedDecoder:sev|r_code[1] ; 0.291             ;
-; ledcode[3]                 ; ledcode[1]                  ; 0.291             ;
-; Debouncer:d|r_ctr[12]      ; Debouncer:d|r_clean_switch  ; 0.245             ;
-; Debouncer:d|r_ctr[11]      ; Debouncer:d|r_clean_switch  ; 0.245             ;
-; Debouncer:d|r_ctr[10]      ; Debouncer:d|r_clean_switch  ; 0.245             ;
-; Debouncer:d|r_ctr[9]       ; Debouncer:d|r_clean_switch  ; 0.245             ;
-; Debouncer:d|r_clean_switch ; r_led1                      ; 0.237             ;
-; Debouncer:d|r_ctr[7]       ; Debouncer:d|r_clean_switch  ; 0.223             ;
-; Debouncer:d|r_ctr[6]       ; Debouncer:d|r_clean_switch  ; 0.223             ;
-; Debouncer:d|r_ctr[5]       ; Debouncer:d|r_clean_switch  ; 0.223             ;
-; Debouncer:d|r_ctr[8]       ; Debouncer:d|r_clean_switch  ; 0.223             ;
+; Debouncer:d|r_clean_switch ; Debouncer:d|r_clean_switch  ; 7.173             ;
+; ledcode[2]                 ; SevLedDecoder:sev|r_code[4] ; 4.836             ;
+; ledcode[1]                 ; SevLedDecoder:sev|r_code[5] ; 4.808             ;
+; ledcode[0]                 ; SevLedDecoder:sev|r_code[5] ; 4.797             ;
+; Debouncer:d|r_ctr[18]      ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[17]      ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[16]      ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[15]      ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[14]      ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[12]      ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[11]      ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[10]      ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[9]       ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[7]       ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[6]       ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[5]       ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[13]      ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; i_btn1                     ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[8]       ; Debouncer:d|r_clean_switch  ; 3.083             ;
+; Debouncer:d|r_ctr[1]       ; Debouncer:d|r_ctr[18]       ; 0.149             ;
+; Debouncer:d|r_ctr[3]       ; Debouncer:d|r_ctr[18]       ; 0.129             ;
+; Debouncer:d|r_ctr[2]       ; Debouncer:d|r_ctr[18]       ; 0.031             ;
 +----------------------------+-----------------------------+-------------------+
-Note: This table only shows the top 19 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 22 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1458,7 +1443,7 @@ Info (171003): Fitter is performing an Auto Fit compilation, which may decrease 
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): i_clk~inputCLKENA0 with 31 fanout uses global clock CLKCTRL_G6
+    Info (11162): i_clk~inputCLKENA0 with 26 fanout uses global clock CLKCTRL_G6
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Info (332104): Reading SDC File: 'Cinna-BoN-FPGA.sdc'
@@ -1474,11 +1459,7 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Warning (15705): Ignored locations or region assignments to the following nodes
-    Warning (15706): Node "GPIO1" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "GPIO2" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LED" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:13
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:12
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -1490,20 +1471,19 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X78_Y0 to location X89_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.21 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
-Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file D:/Cinna-BoN-FPGA/output_files/Cinna-BoN-FPGA.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 2337 megabytes
-    Info: Processing ended: Wed Jul 10 16:54:02 2019
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:57
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 2338 megabytes
+    Info: Processing ended: Thu Jul 11 02:00:37 2019
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:58
 
 
 +----------------------------+

@@ -1,5 +1,5 @@
 |CinnaBoNFPGA
-i_clk => i_clk.IN1
+i_clk => i_clk.IN2
 i_btn1 => i_btn1.IN1
 o_led1 << r_led1.DB_MAX_OUTPUT_PORT_TYPE
 sevled1 << SevLedDecoder:sev.o_code1

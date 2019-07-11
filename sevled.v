@@ -9,18 +9,18 @@ module SevLedDecoder (
   output o_code6
 );
 
-reg[6:0] r_code;
+reg[5:0] r_code;
 
 always @(posedge i_clk)
 begin
   case (i_code)
-  4'b0000 : r_code <= 7'h7E;
-  4'b0001 : r_code <= 7'h10;
-  4'b0010 : r_code <= 7'h0F;
-  4'b0011 : r_code <= 7'h55;
-  4'b0100 : r_code <= 7'h3A;
-  4'b0101 : r_code <= 7'h61;
-  4'b0110 : r_code <= 7'h2D;
+  4'b0000 : r_code <= 6'h3E;
+  4'b0001 : r_code <= 6'h10;
+  4'b0010 : r_code <= 6'h0F;
+  4'b0011 : r_code <= 6'h15;
+  4'b0100 : r_code <= 6'h3A;
+  4'b0101 : r_code <= 6'h21;
+  4'b0110 : r_code <= 6'h0D;
   endcase
 
 end
