@@ -1,0 +1,8 @@
+
+State Machine - |CinnaBoNFPGA|UartRxr:UUT|current_state
+Name current_state.WAITING_FOR_STOP_BIT current_state.GETTING_NEXT_DATA_BIT current_state.CONFIRMING_START_BIT current_state.WAITING_FOR_START_BIT current_state.CLEANUP 
+current_state.WAITING_FOR_START_BIT 0 0 0 0 0 
+current_state.CONFIRMING_START_BIT 0 0 1 1 0 
+current_state.GETTING_NEXT_DATA_BIT 0 1 0 1 0 
+current_state.WAITING_FOR_STOP_BIT 1 0 0 1 0 
+current_state.CLEANUP 0 0 0 1 1 

@@ -1,0 +1,99 @@
+module UartRxr
+  #(parameter CLKS_PER_BAUD_PERIOD = 434)
+  (input i_clk,
+  input i_rx_data_line,
+  output o_data_ready,
+  output [7:0] o_data_byte_out
+  );
+
+  // Uart receiver state machine nodes
+  parameter WAITING_FOR_START_BIT = 3'b000;
+  parameter CONFIRMING_START_BIT = 3'b001;
+  parameter GETTING_NEXT_DATA_BIT = 3'b010;
+  parameter WAITING_FOR_STOP_BIT = 3'b011;
+  parameter CLEANUP = 3'b100;
+
+  reg[2:0] current_state = WAITING_FOR_START_BIT;
+  reg data_ready = 0;
+  reg[7:0] data_byte = 0;
+
+  reg[9:0] clk_ctr = 0;
+  reg[3:0] bit_ctr = 0;
+
+  always @(posedge i_clk)
+  begin
+    case (current_state)
+      WAITING_FOR_START_BIT :
+      begin
+        if (i_rx_data_line == 0)
+          current_state <= CONFIRMING_START_BIT;
+      end
+
+      CONFIRMING_START_BIT :
+      begin
+        if (i_rx_data_line == 1)
+        begin
+          clk_ctr <= 0;
+          current_state <= WAITING_FOR_START_BIT;
+        end
+        else
+        begin
+          if (clk_ctr < (CLKS_PER_BAUD_PERIOD-1)/2)
+            clk_ctr <= clk_ctr + 1;
+          else
+          begin
+            clk_ctr <= 0;
+            current_state <= GETTING_NEXT_DATA_BIT;
+          end
+        end
+      end
+
+      GETTING_NEXT_DATA_BIT :
+      begin
+        if (clk_ctr < CLKS_PER_BAUD_PERIOD-1)
+          clk_ctr <= clk_ctr + 1;
+        else
+        begin
+          data_byte[bit_ctr] <= i_rx_data_line;
+          clk_ctr <= 0;
+          bit_ctr <= bit_ctr + 1;
+          if (bit_ctr >= 8)
+          begin
+            bit_ctr <= 0;
+            current_state <= WAITING_FOR_STOP_BIT;
+          end
+        end
+      end
+
+      WAITING_FOR_STOP_BIT:
+      begin
+        if (clk_ctr < CLKS_PER_BAUD_PERIOD-1)
+          clk_ctr <= clk_ctr + 1;
+        else
+        begin
+          clk_ctr <= 0;
+          if (i_rx_data_line == 1)
+          begin
+            data_ready <= 1;
+            current_state <= CLEANUP;
+          end
+          else
+          begin
+            data_ready <= 0;
+            current_state <= WAITING_FOR_START_BIT;
+          end
+        end
+      end
+
+      CLEANUP:
+      begin
+        data_ready <= 0;
+        current_state <= WAITING_FOR_START_BIT;
+      end
+    endcase
+  end
+
+assign o_data_ready = data_ready;
+assign o_data_byte_out = data_byte;
+
+endmodule

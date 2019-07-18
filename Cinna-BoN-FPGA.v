@@ -1,4 +1,36 @@
+
 module CinnaBoNFPGA
+  (input i_clk,
+  input i_uartrxline,
+  output wire o_led1
+  );
+  
+  reg r_led1 = 0;
+
+  wire w_data_ready;
+  wire[7:0] w_data_byte;
+
+
+  UartRxr #(434) UUT
+    (.i_clk(i_clk),
+    .i_rx_data_line(i_uartrxline),
+    .o_data_ready(w_data_ready),
+    .o_data_byte_out(w_data_byte));
+
+  always @(posedge i_clk)
+  begin
+    if (w_data_ready == 1)
+	 begin
+	   if (w_data_byte == 8'h7A)
+		  r_led1 <= 1;
+	 end
+  end
+  
+  assign o_led1 = r_led1;
+  
+endmodule
+
+/*module CinnaBoNFPGA
   (input i_clk,
   output wire o_led1,
   output wire o_led2,
@@ -6,30 +38,33 @@ module CinnaBoNFPGA
   output wire o_led4,
   output wire o_led5
   );
-
-  wire r_leds1;
-  wire r_leds2;
-  wire r_leds3;
-  wire r_leds4;
-  wire r_leds5;
   
-  SeqBlinker sq
+  wire r_leds[4:0];
+  
+  SeqBlinker
+    #(
+	 50000000, 
+	 25000000, 
+	 12500000, 
+	 10000000, 
+	 5000000
+	 ) sq
     (.i_clk(i_clk),
-	 .outreg1(r_leds1),
-	 .outreg2(r_leds2),
-	 .outreg3(r_leds3),
-	 .outreg4(r_leds4),
-	 .outreg5(r_leds5)
+	 .outreg1(r_leds[0]),
+	 .outreg2(r_leds[1]),
+	 .outreg3(r_leds[2]),
+	 .outreg4(r_leds[3]),
+	 .outreg5(r_leds[4])
 	 );
 	 
-  assign o_led1 = r_leds1;
-  assign o_led2 = r_leds2;
-  assign o_led3 = r_leds3;
-  assign o_led4 = r_leds4;
-  assign o_led5 = r_leds5;
+  assign o_led1 = r_leds[0];
+  assign o_led2 = r_leds[1];
+  assign o_led3 = r_leds[2];
+  assign o_led4 = r_leds[3];
+  assign o_led5 = r_leds[4];
 
 endmodule
-
+*/
 
 /*module CinnaBoNFPGA (
   input wire i_clk,
