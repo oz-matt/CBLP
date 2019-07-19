@@ -1,32 +1,40 @@
 
 module CinnaBoNFPGA
   (input i_clk,
-  input i_uartrxline,
-  output wire o_led1
+  output o_uarttxline
   );
   
-  reg r_led1 = 0;
+  reg[7:0] r_byte_to_send = 8'h31;
+  reg r_data_valid = 0;
+  
+  wire w_good_reset_dv;
+  wire w_send_complete;
+  wire r_uarttxline;
 
-  wire w_data_ready;
-  wire[7:0] w_data_byte;
-
-
-  UartRxr #(434) UUT
+  reg[29:0] sec_ctr = 0;
+  
+  UartTxr #(434) UUT
     (.i_clk(i_clk),
-    .i_rx_data_line(i_uartrxline),
-    .o_data_ready(w_data_ready),
-    .o_data_byte_out(w_data_byte));
+    .i_byte_to_send(r_byte_to_send),
+    .i_data_valid(r_data_valid),
+    .o_dataline(w_uarttxline),
+	 .o_good_to_reset_dv(w_good_to_reset_dv),
+	 .o_send_complete(w_send_complete));
 
   always @(posedge i_clk)
   begin
-    if (w_data_ready == 1)
+    sec_ctr <= sec_ctr + 1;
+	 if (w_good_to_reset_dv == 1)
+	   r_data_valid <= 0;
+	 if (sec_ctr > 100000000)
 	 begin
-	   if (w_data_byte == 8'h7A)
-		  r_led1 <= 1;
+	   sec_ctr <= 0;
+		r_byte_to_send <= r_byte_to_send + 1;
+		r_data_valid <= 1;
 	 end
   end
   
-  assign o_led1 = r_led1;
+  assign o_uarttxline = w_uarttxline;
   
 endmodule
 
