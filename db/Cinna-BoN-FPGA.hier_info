@@ -39,7 +39,7 @@ i_clk => sec_ctr[26].CLK
 i_clk => sec_ctr[27].CLK
 i_clk => sec_ctr[28].CLK
 i_clk => sec_ctr[29].CLK
-o_uarttxline <= UartTxr:UUT.o_dataline
+o_uarttxline << UartTxr:UUT.o_dataline
 
 
 |CinnaBoNFPGA|UartTxr:UUT
