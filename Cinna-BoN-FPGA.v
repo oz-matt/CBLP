@@ -1,39 +1,49 @@
 
 module CinnaBoNFPGA
   (input i_clk,
+  input i_uartrxline,
   output o_uarttxline
   );
   
   reg[7:0] r_byte_to_send = 8'h31;
   reg r_data_valid = 0;
   
-  wire w_good_reset_dv;
+  wire w_good_to_reset_dv;
   wire w_send_complete;
-  wire r_uarttxline;
+  wire w_uarttxline;
+  wire w_data_ready;
+  
+  wire[7:0] w_data_byte;
+  
 
   reg[29:0] sec_ctr = 0;
   
-  UartTxr #(434) UUT
+  UartTxr #(434) TXR_Instance
     (.i_clk(i_clk),
     .i_byte_to_send(r_byte_to_send),
     .i_data_valid(r_data_valid),
     .o_dataline(w_uarttxline),
 	 .o_good_to_reset_dv(w_good_to_reset_dv),
 	 .o_send_complete(w_send_complete));
-
+	 
+  UartRxr #(434) RXR_Instance
+  (.i_clk(i_clk),
+  .i_rx_data_line(i_uartrxline),
+  .o_data_ready(w_data_ready),
+  .o_data_byte_out(w_data_byte));
+  
   always @(posedge i_clk)
   begin
-    sec_ctr <= sec_ctr + 1;
-	 if (w_good_to_reset_dv == 1)
-	   r_data_valid <= 0;
-	 if (sec_ctr > 100000000)
+    if(w_data_ready == 1)
 	 begin
-	   sec_ctr <= 0;
-		r_byte_to_send <= r_byte_to_send + 1;
-		r_data_valid <= 1;
-	 end
-  end
+      r_byte_to_send <= w_data_byte;
+	   r_data_valid <= 1;
+    end
   
+    if(w_good_to_reset_dv == 1)
+	   r_data_valid <= 0;
+  end
+
   assign o_uarttxline = w_uarttxline;
   
 endmodule
