@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Jul 23 00:20:53 2019
+Analysis & Synthesis Status : Successful - Tue Jul 23 10:07:58 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Cinna-BoN-FPGA
 Top-level Entity Name : CinnaBoNFPGA
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 67
+Total registers : 66
 Total pins : 7
 Total virtual pins : 0
 Total block memory bits : 0
