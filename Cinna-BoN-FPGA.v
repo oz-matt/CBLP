@@ -1,4 +1,102 @@
+module CinnaBoNFPGA
+  (input i_clk,
+  input i_adc_miso,
+  output o_adc_convst,
+  output o_adc_sck,
+  output o_adc_mosi,
+  output reg o_led1 = 0,
+  output o_uarttxline
+  );
+  
+  reg[5:0] r_bits_to_send_to_adc = 6'b100000;
+  reg r_request_conversion = 0;
 
+  wire w_adc_dv;
+  
+  wire[11:0] w_adc_data;
+  reg[11:0] r_adc_data = 12'b101010110011;
+  
+  wire w_conv_in_process;
+  reg r_conv_in_process = 0;
+  
+  reg[29:0] sec_ctr = 0;
+  
+  AdcReceiver #(50) AdcInstance
+  (.i_clk(i_clk),
+  .i_tx_bits(r_bits_to_send_to_adc),
+  .i_request_conversion(r_request_conversion),
+  .o_rx_dv(w_adc_dv),
+  .o_rx_data(w_adc_data),
+  .o_conv_in_process(w_conv_in_process),
+  .i_serial_rx(i_adc_miso),
+  .o_convst(o_adc_convst),
+  .o_sck(o_adc_sck),
+  .o_serial_tx(o_adc_mosi)
+  );
+  
+  reg[7:0] r_byte_to_send = 0;
+  reg r_data_valid = 0;
+  
+  wire w_good_to_reset_dv;
+  wire w_send_complete;
+  
+  UartTxr #(434) TXR_Instance
+    (.i_clk(i_clk),
+    .i_byte_to_send(r_byte_to_send),
+    .i_data_valid(r_data_valid),
+    .o_dataline(o_uarttxline),
+	 .o_good_to_reset_dv(w_good_to_reset_dv),
+	 .o_send_complete(w_send_complete)
+	 );
+	 
+  reg[3:0] adcbit = 0;
+
+  always @(posedge i_clk)
+  begin
+    sec_ctr <= sec_ctr + 1;
+	 
+	 if (sec_ctr == 1 || sec_ctr == 5000 || sec_ctr == 10000 ||
+	 sec_ctr == 15000 || sec_ctr == 20000 || sec_ctr == 25000 ||
+	 sec_ctr == 30000 || sec_ctr == 35000 || sec_ctr == 40000 ||
+	 sec_ctr == 45000 || sec_ctr == 50000 || sec_ctr == 55000)
+	 begin
+	   r_byte_to_send <= 8'h30 + r_adc_data[adcbit];
+		r_data_valid <= 1;
+	 end
+	 if (sec_ctr == 60000)
+	 begin
+	   r_byte_to_send <= 8'h0A;
+		r_data_valid <= 1;
+	 end
+	 if (sec_ctr == 65000)
+	 begin
+	   r_byte_to_send <= 8'h0D;
+		r_data_valid <= 1;
+		adcbit <= 0;
+	 end
+	 
+	 if (sec_ctr > 100000000)
+	 begin
+	   o_led1 <= ~o_led1;
+	   sec_ctr <= 0;
+	 end
+	 if(w_conv_in_process == 1) 
+	   r_request_conversion <= 0;
+	 if(w_good_to_reset_dv == 1) 
+	   r_data_valid <= 0;
+    if(w_send_complete == 1)
+	 begin
+	   adcbit <= adcbit + 1;
+		if(adcbit > 13)
+		  adcbit <= 0;
+    end
+  end
+
+  
+endmodule
+
+
+/*
 module CinnaBoNFPGA
   (input i_clk,
   input i_uartrxline,
@@ -47,7 +145,7 @@ module CinnaBoNFPGA
   assign o_uarttxline = w_uarttxline;
   
 endmodule
-
+*/
 /*module CinnaBoNFPGA
   (input i_clk,
   output wire o_led1,

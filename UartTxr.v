@@ -23,6 +23,8 @@ reg[3:0] bit_ctr = 0;
 
 reg[2:0] r_current_state = WAIT_FOR_DATA_VALID;
 
+reg[7:0] r_byte_to_send = 0;
+
 always @(posedge i_clk)
 begin
   case (r_current_state)
@@ -42,6 +44,7 @@ begin
       if (clk_ctr > CLKS_PER_BIT - 1)
       begin
         clk_ctr <= 0;
+		  r_byte_to_send <= i_byte_to_send;
         r_good_to_reset_dv <= 1;
         r_current_state <= SEND_DATA_BITS;
       end
@@ -49,7 +52,7 @@ begin
 
   SEND_DATA_BITS:
     begin
-      r_dataline <= i_byte_to_send[bit_ctr];
+      r_dataline <= r_byte_to_send[bit_ctr];
       clk_ctr <= clk_ctr + 1;
       if (clk_ctr > CLKS_PER_BIT - 1)
       begin
