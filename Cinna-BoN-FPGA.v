@@ -57,7 +57,7 @@ module CinnaBoNFPGA
 	 
 	 if (sec_ctr == 1)
 	 begin
-	   r_byte_to_send <= 8'h30 + r_adc_data[0];
+	   r_byte_to_send <= 8'h30 + w_adc_data[0];
 		r_data_valid <= 1;
 		adcbit <= 1;
 	 end
@@ -67,7 +67,7 @@ module CinnaBoNFPGA
 	 sec_ctr == 30000 || sec_ctr == 35000 || sec_ctr == 40000 ||
 	 sec_ctr == 45000 || sec_ctr == 50000 || sec_ctr == 55000)
 	 begin
-	   r_byte_to_send <= 8'h30 + r_adc_data[adcbit];
+	   r_byte_to_send <= 8'h30 + w_adc_data[adcbit];
 		r_data_valid <= 1;
 	   adcbit <= adcbit + 1;
 	 end
@@ -81,6 +81,7 @@ module CinnaBoNFPGA
 	 begin
 	   r_byte_to_send <= 8'h0D;
 		r_data_valid <= 1;
+		r_request_conversion <= 1;
 	 end
 	 
 	 if (sec_ctr > 100000000)

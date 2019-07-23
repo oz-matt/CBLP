@@ -4,6 +4,18 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "o_adc_convst",
+					"strict" : false
+				},
+				{
+					"name" : "o_adc_sck",
+					"strict" : false
+				},
+				{
+					"name" : "o_adc_mosi",
+					"strict" : false
+				},
+				{
 					"name" : "o_led1",
 					"strict" : false
 				},
@@ -13,6 +25,10 @@
 				},
 				{
 					"name" : "i_clk",
+					"strict" : false
+				},
+				{
+					"name" : "i_adc_miso",
 					"strict" : false
 				}
 			]

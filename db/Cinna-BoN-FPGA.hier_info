@@ -1,8 +1,8 @@
 |CinnaBoNFPGA
 i_clk => AdcReceiver:AdcInstance.i_clk
 i_clk => UartTxr:TXR_Instance.i_clk
-i_clk => r_request_conversion.CLK
 i_clk => o_led1~reg0.CLK
+i_clk => r_request_conversion.CLK
 i_clk => adcbit[0].CLK
 i_clk => adcbit[1].CLK
 i_clk => adcbit[2].CLK
@@ -47,11 +47,11 @@ i_clk => sec_ctr[27].CLK
 i_clk => sec_ctr[28].CLK
 i_clk => sec_ctr[29].CLK
 i_adc_miso => AdcReceiver:AdcInstance.i_serial_rx
-o_adc_convst <= AdcReceiver:AdcInstance.o_convst
-o_adc_sck <= AdcReceiver:AdcInstance.o_sck
-o_adc_mosi <= AdcReceiver:AdcInstance.o_serial_tx
-o_led1 <= o_led1~reg0.DB_MAX_OUTPUT_PORT_TYPE
-o_uarttxline <= UartTxr:TXR_Instance.o_dataline
+o_adc_convst << AdcReceiver:AdcInstance.o_convst
+o_adc_sck << AdcReceiver:AdcInstance.o_sck
+o_adc_mosi << AdcReceiver:AdcInstance.o_serial_tx
+o_led1 << o_led1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_uarttxline << UartTxr:TXR_Instance.o_dataline
 
 
 |CinnaBoNFPGA|AdcReceiver:AdcInstance
