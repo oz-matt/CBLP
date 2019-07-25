@@ -1,9 +1,11 @@
 module CinnaBoNFPGA
   (input i_clk,
+  output o_dac_clk,
   output[13:0] o_dac_data);
   
   ad9767if DacInstance 
   (.i_clk(i_clk),
+  .o_dac_clk(o_dac_clk),
   .o_dac_data(o_dac_data));
   
 endmodule
