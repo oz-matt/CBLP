@@ -1,18 +1,11 @@
 
-State Machine - |CinnaBoNFPGA|UartTxr:TXR_Instance|r_current_state
-Name r_current_state.SEND_STOP_BIT r_current_state.SEND_DATA_BITS r_current_state.SEND_START_BIT r_current_state.WAIT_FOR_DATA_VALID r_current_state.CLEANUP 
-r_current_state.WAIT_FOR_DATA_VALID 0 0 0 0 0 
-r_current_state.SEND_START_BIT 0 0 1 1 0 
-r_current_state.SEND_DATA_BITS 0 1 0 1 0 
-r_current_state.SEND_STOP_BIT 1 0 0 1 0 
-r_current_state.CLEANUP 0 0 0 1 1 
-
-State Machine - |CinnaBoNFPGA|AdcReceiver:AdcInstance|r_current_state
-Name r_current_state.CLEANUP r_current_state.WAITING_TACQ_DELAY r_current_state.TRANSFERING_DATA r_current_state.SENDING_CONVST_LOW r_current_state.WAITING_TCONV_PLUS_NAP_DELAY r_current_state.SENDING_CONVST_HIGH r_current_state.READY_FOR_NEXT_CONVERSION 
-r_current_state.READY_FOR_NEXT_CONVERSION 0 0 0 0 0 0 0 
-r_current_state.SENDING_CONVST_HIGH 0 0 0 0 0 1 1 
-r_current_state.WAITING_TCONV_PLUS_NAP_DELAY 0 0 0 0 1 0 1 
-r_current_state.SENDING_CONVST_LOW 0 0 0 1 0 0 1 
-r_current_state.TRANSFERING_DATA 0 0 1 0 0 0 1 
-r_current_state.WAITING_TACQ_DELAY 0 1 0 0 0 0 1 
-r_current_state.CLEANUP 1 0 0 0 0 0 1 
+State Machine - |CinnaBoNFPGA|ad9833if:UUT|current_node
+Name current_node.CLEANUP current_node.SEND_COMPLETE current_node.FSYNC_WAIT_LOW_1 current_node.FSYNC_WAIT_HIGH_1 current_node.WORD_TRANSFER_1 current_node.START_FSYNC current_node.START_SCLK current_node.0000 
+current_node.0000 0 0 0 0 0 0 0 0 
+current_node.START_SCLK 0 0 0 0 0 0 1 1 
+current_node.START_FSYNC 0 0 0 0 0 1 0 1 
+current_node.WORD_TRANSFER_1 0 0 0 0 1 0 0 1 
+current_node.FSYNC_WAIT_HIGH_1 0 0 0 1 0 0 0 1 
+current_node.FSYNC_WAIT_LOW_1 0 0 1 0 0 0 0 1 
+current_node.SEND_COMPLETE 0 1 0 0 0 0 0 1 
+current_node.CLEANUP 1 0 0 0 0 0 0 1 

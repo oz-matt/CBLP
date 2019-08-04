@@ -4,11 +4,15 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "o_dac_clk",
+					"name" : "fsync",
 					"strict" : false
 				},
 				{
-					"name" : "o_dac_data[13]",
+					"name" : "sclk",
+					"strict" : false
+				},
+				{
+					"name" : "sdata",
 					"strict" : false
 				},
 				{

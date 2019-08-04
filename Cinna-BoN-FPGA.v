@@ -1,5 +1,74 @@
 module CinnaBoNFPGA
   (input i_clk,
+  output fsync,
+  output sclk,
+  output sdata);
+  
+  reg go = 0;
+  
+  reg[15:0] control = 16'b0010000000000000;
+  reg[15:0] adreg0 = 16'b0101000000000000;
+  reg[15:0] adreg1 = 16'b0100000000000000;
+  
+  reg [31:0] clk_ctr = 1;
+
+  wire good_to_reset_go, send_complete;
+
+  ad9833if UUT
+    (
+    .clk(i_clk),
+    .go(go),
+    .control(control),
+    .adreg0(adreg0),
+    .adreg1(adreg1),
+    .good_to_reset_go(good_to_reset_go),
+    .send_complete(send_complete),
+    .fsync(fsync),
+    .sclk(sclk),
+    .sdata(sdata)
+    );
+	 
+  always @(posedge i_clk)
+  begin
+    if(good_to_reset_go == 1) 
+	   go <= 0;
+    if (clk_ctr >= 1)
+	 begin
+	   if (clk_ctr >= 50000000)
+		begin
+		  clk_ctr <= 0;
+		  go <= 1;
+		  //adreg1 <= adreg1 + 1;
+		end
+	   else
+		  clk_ctr <= clk_ctr + 1;
+	 end
+  end
+	 
+endmodule
+	 
+/*module CinnaBoNFPGA
+  (input i_clk,
+  output o_dac_clk,
+  output[13:0] o_dac_data);
+  
+  reg[7:0] r_sine_f = 0;
+  
+  wire[13:0] w_dac_data;
+
+ad9767sine UUT 
+  (.i_clk(i_clk),
+  .i_sine_f(r_sine_f),
+  .o_dac_clk(o_dac_clk),
+  .o_dac_data(w_dac_data));
+  
+  assign o_dac_data = w_dac_data;
+  
+endmodule
+*/
+/*
+module CinnaBoNFPGA
+  (input i_clk,
   output o_dac_clk,
   output[13:0] o_dac_data);
   
@@ -9,6 +78,7 @@ module CinnaBoNFPGA
   .o_dac_data(o_dac_data));
   
 endmodule
+*/
 
 /*module CinnaBoNFPGA
   (input i_clk,
