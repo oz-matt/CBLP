@@ -1,2 +1,2 @@
 Warning (10268): Verilog HDL information at ad9767if.v(12): always construct contains both blocking and non-blocking assignments File: D:/Cinna-BoN-FPGA/ad9767if.v Line: 12
-Info (10281): Verilog HDL Declaration information at ad9833if.v(10): object "send_complete" differs only in case from object "SEND_COMPLETE" in the same scope File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 10
+Info (10281): Verilog HDL Declaration information at ad9833if.v(9): object "send_complete" differs only in case from object "SEND_COMPLETE" in the same scope File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 9

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Cinna-BoN-FPGA
-Sat Aug 03 20:15:38 2019
+Sun Aug 04 01:07:44 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -49,14 +49,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Aug 03 20:15:38 2019       ;
+; Analysis & Synthesis Status     ; Successful - Sun Aug 04 01:07:44 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Cinna-BoN-FPGA                              ;
 ; Top-level Entity Name           ; CinnaBoNFPGA                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 69                                          ;
-; Total pins                      ; 4                                           ;
+; Total registers                 ; 93                                          ;
+; Total pins                      ; 5                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -188,25 +188,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 68          ;
+; Estimate of Logic utilization (ALMs needed) ; 104         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 107         ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 28          ;
-;     -- 5 input functions                    ; 12          ;
-;     -- 4 input functions                    ; 9           ;
-;     -- <=3 input functions                  ; 58          ;
+; Combinational ALUT usage for logic          ; 160         ;
+;     -- 7 input functions                    ; 6           ;
+;     -- 6 input functions                    ; 40          ;
+;     -- 5 input functions                    ; 16          ;
+;     -- 4 input functions                    ; 12          ;
+;     -- <=3 input functions                  ; 86          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 69          ;
+; Dedicated logic registers                   ; 93          ;
 ;                                             ;             ;
-; I/O pins                                    ; 4           ;
+; I/O pins                                    ; 5           ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_clk~input ;
-; Maximum fan-out                             ; 69          ;
-; Total fan-out                               ; 624         ;
-; Average fan-out                             ; 3.39        ;
+; Maximum fan-out                             ; 93          ;
+; Total fan-out                               ; 893         ;
+; Average fan-out                             ; 3.40        ;
 +---------------------------------------------+-------------+
 
 
@@ -215,8 +215,8 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name  ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+--------------+--------------+
-; |CinnaBoNFPGA              ; 107 (45)            ; 69 (33)                   ; 0                 ; 0          ; 4    ; 0            ; |CinnaBoNFPGA              ; CinnaBoNFPGA ; work         ;
-;    |ad9833if:UUT|          ; 62 (62)             ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |CinnaBoNFPGA|ad9833if:UUT ; ad9833if     ; work         ;
+; |CinnaBoNFPGA              ; 160 (73)            ; 93 (57)                   ; 0                 ; 0          ; 5    ; 0            ; |CinnaBoNFPGA              ; CinnaBoNFPGA ; work         ;
+;    |ad9833if:UUT|          ; 87 (87)             ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |CinnaBoNFPGA|ad9833if:UUT ; ad9833if     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -244,11 +244,12 @@ Encoding Type:  One-Hot
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
 ; ad9833if:UUT|word_ctr[2]              ; Stuck at GND due to stuck port data_in ;
+; freq[4]                               ; Merged with led~reg0                   ;
 ; ad9833if:UUT|current_node~10          ; Lost fanout                            ;
 ; ad9833if:UUT|current_node~11          ; Lost fanout                            ;
 ; ad9833if:UUT|current_node~12          ; Lost fanout                            ;
 ; ad9833if:UUT|current_node~13          ; Lost fanout                            ;
-; Total Number of Removed Registers = 5 ;                                        ;
+; Total Number of Removed Registers = 6 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -257,12 +258,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 69    ;
+; Total registers                              ; 93    ;
 ; Number of registers using Synchronous Clear  ; 47    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 47    ;
+; Number of registers using Clock Enable       ; 71    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -272,8 +273,12 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
+; led~reg0                               ; 4       ;
+; freq[7]                                ; 2       ;
+; freq[6]                                ; 2       ;
+; freq[5]                                ; 2       ;
 ; clk_ctr[0]                             ; 2       ;
-; Total number of inverted registers = 1 ;         ;
+; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
@@ -286,7 +291,7 @@ Encoding Type:  One-Hot
 ; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |CinnaBoNFPGA|ad9833if:UUT|bit_ctr     ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |CinnaBoNFPGA|ad9833if:UUT|Selector1   ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |CinnaBoNFPGA|ad9833if:UUT|Selector0   ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 6 LEs                ; 8 LEs                  ; No         ; |CinnaBoNFPGA|ad9833if:UUT|Selector2   ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 6 LEs                ; 8 LEs                  ; No         ; |CinnaBoNFPGA|ad9833if:UUT|Selector5   ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 6 LEs                ; 8 LEs                  ; No         ; |CinnaBoNFPGA|ad9833if:UUT|Selector6   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
@@ -296,7 +301,7 @@ Encoding Type:  One-Hot
 +----------------+-------+----------------------------------+
 ; Parameter Name ; Value ; Type                             ;
 +----------------+-------+----------------------------------+
-; CLKS_PER_BIT   ; 50    ; Signed Integer                   ;
+; CLKS_PER_BIT   ; 250   ; Signed Integer                   ;
 +----------------+-------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -309,14 +314,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; control[15..14] ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; control[12..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; control[13]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; adreg0[11..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; adreg0[15]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; adreg0[14]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; adreg0[13]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; adreg0[12]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; adreg1[13..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; adreg1[15]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; adreg1[14]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; freq[3..0]      ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; send_complete   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -326,22 +324,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 69                          ;
+; arriav_ff             ; 93                          ;
+;     ENA               ; 24                          ;
 ;     ENA SCLR          ; 47                          ;
 ;     plain             ; 22                          ;
-; arriav_lcell_comb     ; 107                         ;
-;     arith             ; 48                          ;
-;         1 data inputs ; 48                          ;
-;     normal            ; 59                          ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 9                           ;
-;         5 data inputs ; 12                          ;
-;         6 data inputs ; 28                          ;
-; boundary_port         ; 4                           ;
+; arriav_lcell_comb     ; 161                         ;
+;     arith             ; 72                          ;
+;         1 data inputs ; 72                          ;
+;     extend            ; 6                           ;
+;         7 data inputs ; 6                           ;
+;     normal            ; 83                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 12                          ;
+;         5 data inputs ; 16                          ;
+;         6 data inputs ; 40                          ;
+; boundary_port         ; 5                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.85                        ;
+; Average LUT depth     ; 2.96                        ;
 +-----------------------+-----------------------------+
 
 
@@ -360,7 +362,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Aug 03 20:15:27 2019
+    Info: Processing started: Sun Aug 04 01:07:33 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Cinna-BoN-FPGA -c Cinna-BoN-FPGA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -386,6 +388,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file ad9767s
     Info (12023): Found entity 1: ad9767sine File: D:/Cinna-BoN-FPGA/ad9767sine.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ad9833if.v
     Info (12023): Found entity 1: ad9833if File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(16): Parameter Declaration in module "ad9833if" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 16
 Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(17): Parameter Declaration in module "ad9833if" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 17
 Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(18): Parameter Declaration in module "ad9833if" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 18
 Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(19): Parameter Declaration in module "ad9833if" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 19
@@ -393,7 +396,6 @@ Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(20): Pa
 Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(21): Parameter Declaration in module "ad9833if" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 21
 Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(22): Parameter Declaration in module "ad9833if" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 22
 Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(23): Parameter Declaration in module "ad9833if" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 23
-Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(24): Parameter Declaration in module "ad9833if" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 24
 Warning (10222): Verilog HDL Parameter Declaration warning at UartRxr.v(10): Parameter Declaration in module "UartRxr" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/UartRxr.v Line: 10
 Warning (10222): Verilog HDL Parameter Declaration warning at UartRxr.v(11): Parameter Declaration in module "UartRxr" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/UartRxr.v Line: 11
 Warning (10222): Verilog HDL Parameter Declaration warning at UartRxr.v(12): Parameter Declaration in module "UartRxr" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/UartRxr.v Line: 12
@@ -412,28 +414,28 @@ Warning (10222): Verilog HDL Parameter Declaration warning at AdcReceiver.v(41):
 Warning (10222): Verilog HDL Parameter Declaration warning at AdcReceiver.v(42): Parameter Declaration in module "AdcReceiver" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/AdcReceiver.v Line: 42
 Warning (10222): Verilog HDL Parameter Declaration warning at AdcReceiver.v(43): Parameter Declaration in module "AdcReceiver" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/AdcReceiver.v Line: 43
 Info (12127): Elaborating entity "CinnaBoNFPGA" for the top level hierarchy
-Info (12128): Elaborating entity "ad9833if" for hierarchy "ad9833if:UUT" File: D:/Cinna-BoN-FPGA/Cinna-BoN-FPGA.v Line: 29
-Warning (10230): Verilog HDL assignment warning at ad9833if.v(55): truncated value with size 32 to match size of target (16) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 55
-Warning (10230): Verilog HDL assignment warning at ad9833if.v(68): truncated value with size 32 to match size of target (16) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 68
-Warning (10230): Verilog HDL assignment warning at ad9833if.v(94): truncated value with size 32 to match size of target (6) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 94
-Warning (10230): Verilog HDL assignment warning at ad9833if.v(97): truncated value with size 32 to match size of target (16) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 97
-Warning (10230): Verilog HDL assignment warning at ad9833if.v(110): truncated value with size 32 to match size of target (16) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 110
-Warning (10230): Verilog HDL assignment warning at ad9833if.v(124): truncated value with size 32 to match size of target (3) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 124
-Warning (10230): Verilog HDL assignment warning at ad9833if.v(129): truncated value with size 32 to match size of target (16) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 129
+Info (12128): Elaborating entity "ad9833if" for hierarchy "ad9833if:UUT" File: D:/Cinna-BoN-FPGA/Cinna-BoN-FPGA.v Line: 28
+Warning (10230): Verilog HDL assignment warning at ad9833if.v(63): truncated value with size 32 to match size of target (16) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 63
+Warning (10230): Verilog HDL assignment warning at ad9833if.v(76): truncated value with size 32 to match size of target (16) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 76
+Warning (10230): Verilog HDL assignment warning at ad9833if.v(102): truncated value with size 32 to match size of target (6) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 102
+Warning (10230): Verilog HDL assignment warning at ad9833if.v(105): truncated value with size 32 to match size of target (16) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 105
+Warning (10230): Verilog HDL assignment warning at ad9833if.v(120): truncated value with size 32 to match size of target (16) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 120
+Warning (10230): Verilog HDL assignment warning at ad9833if.v(134): truncated value with size 32 to match size of target (3) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 134
+Warning (10230): Verilog HDL assignment warning at ad9833if.v(139): truncated value with size 32 to match size of target (16) File: D:/Cinna-BoN-FPGA/ad9833if.v Line: 139
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/Cinna-BoN-FPGA/output_files/Cinna-BoN-FPGA.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 166 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 108 logic cells
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 161 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 685 megabytes
-    Info: Processing ended: Sat Aug 03 20:15:38 2019
+    Info: Peak virtual memory: 684 megabytes
+    Info: Processing ended: Sun Aug 04 01:07:44 2019
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+

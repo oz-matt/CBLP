@@ -1,11 +1,10 @@
 module ad9833if
-  #(parameter CLKS_PER_BIT = 50)
+  #(parameter CLKS_PER_BIT = 250)
   (
   input clk,
   input go,
   input[15:0] control,
-  input[15:0] adreg0,
-  input[15:0] adreg1,
+  input[27:0] freq,
   output reg good_to_reset_go = 0,
   output reg send_complete = 0,
   output reg fsync = 1,
@@ -28,6 +27,15 @@ module ad9833if
   reg[15:0] clk_ctr = 0;
   reg[5:0] bit_ctr = 0;
   reg[2:0] word_ctr = 0;
+  
+  wire[15:0] adreg0;
+  wire[15:0] adreg1;
+  
+  //reg[15:0] adreg0 = 16'b0100000000001000;
+  //reg[15:0] adreg1 = 16'b0100000000000000;
+  
+  assign adreg0 = 16'h4000 | freq[13:0];
+  assign adreg1 = 16'h4000 | freq[27:14];
   
   always @(posedge clk)
   begin
@@ -101,6 +109,8 @@ module ad9833if
       begin
         if (clk_ctr == 0)
           fsync <= 1;
+		  if (clk_ctr == CLKS_PER_BIT / 4)
+          sclk <= 0;
         if (clk_ctr >= CLKS_PER_BIT * 2)
         begin
           clk_ctr <= 0;

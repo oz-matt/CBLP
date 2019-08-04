@@ -2,13 +2,13 @@ module CinnaBoNFPGA
   (input i_clk,
   output fsync,
   output sclk,
-  output sdata);
+  output sdata,
+  output reg led);
   
   reg go = 0;
   
   reg[15:0] control = 16'b0010000000000000;
-  reg[15:0] adreg0 = 16'b0101000000000000;
-  reg[15:0] adreg1 = 16'b0100000000000000;
+  reg[27:0] freq = 28'h00000f0;
   
   reg [31:0] clk_ctr = 1;
 
@@ -19,8 +19,7 @@ module CinnaBoNFPGA
     .clk(i_clk),
     .go(go),
     .control(control),
-    .adreg0(adreg0),
-    .adreg1(adreg1),
+    .freq(freq),
     .good_to_reset_go(good_to_reset_go),
     .send_complete(send_complete),
     .fsync(fsync),
@@ -36,9 +35,10 @@ module CinnaBoNFPGA
 	 begin
 	   if (clk_ctr >= 50000000)
 		begin
-		  clk_ctr <= 0;
+		  clk_ctr <= 1;
+		  led <= ~led;
 		  go <= 1;
-		  //adreg1 <= adreg1 + 1;
+		  freq <= freq + 28'h00000f0;
 		end
 	   else
 		  clk_ctr <= clk_ctr + 1;
