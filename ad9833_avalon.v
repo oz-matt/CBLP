@@ -3,9 +3,7 @@ module ad9833_avalon (
   input resetn,
   input chipselect,
   input[3:0] byteenable,
-  input[31:0] writedata, 
-  input write,
-  
+  input[31:0] writedata,
   output[31:0] Q_export
   );
   
@@ -14,11 +12,13 @@ module ad9833_avalon (
   wire fsync;
   wire sclk;
   wire sdata;
+  wire go;
+
 
 ad9833if aif ( 
   .clk(clock),
   .resetn(resetn),
-  .go(write),
+  .go(go),
   .datain(writedata),
   .byteenable(byteenable),
   .good_to_reset_go(good_to_reset_go),
@@ -33,5 +33,6 @@ ad9833if aif (
   assign Q_export[2] = fsync;
   assign Q_export[3] = sclk;
   assign Q_export[4] = sdata;
+  assign Q_export[5] = go;
 
 endmodule

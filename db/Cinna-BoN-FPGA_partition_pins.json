@@ -4,6 +4,18 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "fsync",
+					"strict" : false
+				},
+				{
+					"name" : "sclk",
+					"strict" : false
+				},
+				{
+					"name" : "sdata",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				}

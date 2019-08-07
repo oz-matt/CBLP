@@ -15,14 +15,12 @@ module embedded_system (
 	wire  [13:0] nios2_qsys_0_data_master_address;                             // nios2_qsys_0:d_address -> mm_interconnect_0:nios2_qsys_0_data_master_address
 	wire   [3:0] nios2_qsys_0_data_master_byteenable;                          // nios2_qsys_0:d_byteenable -> mm_interconnect_0:nios2_qsys_0_data_master_byteenable
 	wire         nios2_qsys_0_data_master_read;                                // nios2_qsys_0:d_read -> mm_interconnect_0:nios2_qsys_0_data_master_read
-	wire         nios2_qsys_0_data_master_readdatavalid;                       // mm_interconnect_0:nios2_qsys_0_data_master_readdatavalid -> nios2_qsys_0:d_readdatavalid
 	wire         nios2_qsys_0_data_master_write;                               // nios2_qsys_0:d_write -> mm_interconnect_0:nios2_qsys_0_data_master_write
 	wire  [31:0] nios2_qsys_0_data_master_writedata;                           // nios2_qsys_0:d_writedata -> mm_interconnect_0:nios2_qsys_0_data_master_writedata
 	wire  [31:0] nios2_qsys_0_instruction_master_readdata;                     // mm_interconnect_0:nios2_qsys_0_instruction_master_readdata -> nios2_qsys_0:i_readdata
 	wire         nios2_qsys_0_instruction_master_waitrequest;                  // mm_interconnect_0:nios2_qsys_0_instruction_master_waitrequest -> nios2_qsys_0:i_waitrequest
 	wire  [13:0] nios2_qsys_0_instruction_master_address;                      // nios2_qsys_0:i_address -> mm_interconnect_0:nios2_qsys_0_instruction_master_address
 	wire         nios2_qsys_0_instruction_master_read;                         // nios2_qsys_0:i_read -> mm_interconnect_0:nios2_qsys_0_instruction_master_read
-	wire         nios2_qsys_0_instruction_master_readdatavalid;                // mm_interconnect_0:nios2_qsys_0_instruction_master_readdatavalid -> nios2_qsys_0:i_readdatavalid
 	wire         mm_interconnect_0_ad9833_comp_0_avalon_slave_0_chipselect;    // mm_interconnect_0:ad9833_comp_0_avalon_slave_0_chipselect -> ad9833_comp_0:chipselect
 	wire   [3:0] mm_interconnect_0_ad9833_comp_0_avalon_slave_0_byteenable;    // mm_interconnect_0:ad9833_comp_0_avalon_slave_0_byteenable -> ad9833_comp_0:byteenable
 	wire         mm_interconnect_0_ad9833_comp_0_avalon_slave_0_write;         // mm_interconnect_0:ad9833_comp_0_avalon_slave_0_write -> ad9833_comp_0:write
@@ -67,13 +65,11 @@ module embedded_system (
 		.d_waitrequest                         (nios2_qsys_0_data_master_waitrequest),                         //                          .waitrequest
 		.d_write                               (nios2_qsys_0_data_master_write),                               //                          .write
 		.d_writedata                           (nios2_qsys_0_data_master_writedata),                           //                          .writedata
-		.d_readdatavalid                       (nios2_qsys_0_data_master_readdatavalid),                       //                          .readdatavalid
 		.jtag_debug_module_debugaccess_to_roms (nios2_qsys_0_data_master_debugaccess),                         //                          .debugaccess
 		.i_address                             (nios2_qsys_0_instruction_master_address),                      //        instruction_master.address
 		.i_read                                (nios2_qsys_0_instruction_master_read),                         //                          .read
 		.i_readdata                            (nios2_qsys_0_instruction_master_readdata),                     //                          .readdata
 		.i_waitrequest                         (nios2_qsys_0_instruction_master_waitrequest),                  //                          .waitrequest
-		.i_readdatavalid                       (nios2_qsys_0_instruction_master_readdatavalid),                //                          .readdatavalid
 		.d_irq                                 (nios2_qsys_0_d_irq_irq),                                       //                     d_irq.irq
 		.jtag_debug_module_resetrequest        (nios2_qsys_0_jtag_debug_module_reset_reset),                   //   jtag_debug_module_reset.reset
 		.jtag_debug_module_address             (mm_interconnect_0_nios2_qsys_0_jtag_debug_module_address),     //         jtag_debug_module.address
@@ -109,7 +105,6 @@ module embedded_system (
 		.nios2_qsys_0_data_master_byteenable              (nios2_qsys_0_data_master_byteenable),                          //                                           .byteenable
 		.nios2_qsys_0_data_master_read                    (nios2_qsys_0_data_master_read),                                //                                           .read
 		.nios2_qsys_0_data_master_readdata                (nios2_qsys_0_data_master_readdata),                            //                                           .readdata
-		.nios2_qsys_0_data_master_readdatavalid           (nios2_qsys_0_data_master_readdatavalid),                       //                                           .readdatavalid
 		.nios2_qsys_0_data_master_write                   (nios2_qsys_0_data_master_write),                               //                                           .write
 		.nios2_qsys_0_data_master_writedata               (nios2_qsys_0_data_master_writedata),                           //                                           .writedata
 		.nios2_qsys_0_data_master_debugaccess             (nios2_qsys_0_data_master_debugaccess),                         //                                           .debugaccess
@@ -117,7 +112,6 @@ module embedded_system (
 		.nios2_qsys_0_instruction_master_waitrequest      (nios2_qsys_0_instruction_master_waitrequest),                  //                                           .waitrequest
 		.nios2_qsys_0_instruction_master_read             (nios2_qsys_0_instruction_master_read),                         //                                           .read
 		.nios2_qsys_0_instruction_master_readdata         (nios2_qsys_0_instruction_master_readdata),                     //                                           .readdata
-		.nios2_qsys_0_instruction_master_readdatavalid    (nios2_qsys_0_instruction_master_readdatavalid),                //                                           .readdatavalid
 		.ad9833_comp_0_avalon_slave_0_write               (mm_interconnect_0_ad9833_comp_0_avalon_slave_0_write),         //               ad9833_comp_0_avalon_slave_0.write
 		.ad9833_comp_0_avalon_slave_0_writedata           (mm_interconnect_0_ad9833_comp_0_avalon_slave_0_writedata),     //                                           .writedata
 		.ad9833_comp_0_avalon_slave_0_byteenable          (mm_interconnect_0_ad9833_comp_0_avalon_slave_0_byteenable),    //                                           .byteenable

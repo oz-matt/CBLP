@@ -1,8 +1,8 @@
 
 module embedded_system (
-	clk_clk,
-	ad9833_io_readdata);	
+	ad9833_io_readdata,
+	clk_clk);	
 
-	input		clk_clk;
 	output	[31:0]	ad9833_io_readdata;
+	input		clk_clk;
 endmodule

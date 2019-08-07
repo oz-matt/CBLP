@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="486eb5d5f64865c7e497"/>
+    <hash md5_digest_80b="71c88fcc6943346a504e"/>
   </project>
   <file_info>
     <file device="5CSEBA6U23I7" path="Cinna-BoN-FPGA.sof" usercode="0xFFFFFFFF"/>
@@ -85,7 +85,7 @@
   <sld_infos>
     <sld_info hpath="embedded_system:u0" name="u0">
       <assignment_values>
-        <assignment_value text="QSYS_NAME embedded_system HAS_SOPCINFO 1 GENERATION_ID 1565123402"/>
+        <assignment_value text="QSYS_NAME embedded_system HAS_SOPCINFO 1 GENERATION_ID 1565202724"/>
       </assignment_values>
       <parameters/>
     </sld_info>

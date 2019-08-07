@@ -6,8 +6,8 @@ module CinnaBoNFPGA
   );
   
   reg[31:0] local_io;
-  reg send_complete;
-  reg good_to_reset_go;
+  //reg send_complete;
+  //reg good_to_reset_go;
   
   
   embedded_system u0 (
@@ -19,8 +19,8 @@ module CinnaBoNFPGA
 	 assign sclk = local_io[3];
 	 assign sdata = local_io[4];
 	 
-	 assign send_complete = local_io[1];
-	 assign good_to_reset_go = local_io[0];
+	 //assign send_complete = local_io[1];
+	 //assign good_to_reset_go = local_io[0];
 
   
 endmodule
