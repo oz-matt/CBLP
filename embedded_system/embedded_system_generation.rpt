@@ -1,0 +1,106 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\Cinna-BoN-FPGA\embedded_system.qsys --block-symbol-file --output-directory=D:\Cinna-BoN-FPGA\embedded_system --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading Cinna-BoN-FPGA/embedded_system.qsys
+Progress: Reading input file
+Progress: Adding ad9833_comp_0 [ad9833_comp 1.0]
+Progress: Parameterizing module ad9833_comp_0
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_qsys_0 [altera_nios2_qsys 16.1]
+Progress: Parameterizing module nios2_qsys_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: embedded_system.nios2_qsys_0: Nios II Classic cores are no longer recommended for new projects
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Cinna-BoN-FPGA\embedded_system.qsys --synthesis=VERILOG --greybox --output-directory=D:\Cinna-BoN-FPGA\embedded_system\synthesis --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading Cinna-BoN-FPGA/embedded_system.qsys
+Progress: Reading input file
+Progress: Adding ad9833_comp_0 [ad9833_comp 1.0]
+Progress: Parameterizing module ad9833_comp_0
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_qsys_0 [altera_nios2_qsys 16.1]
+Progress: Parameterizing module nios2_qsys_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: embedded_system.nios2_qsys_0: Nios II Classic cores are no longer recommended for new projects
+Info: embedded_system: Generating embedded_system "embedded_system" for QUARTUS_SYNTH
+Info: ad9833_comp_0: "embedded_system" instantiated ad9833_comp "ad9833_comp_0"
+Info: nios2_qsys_0: Starting RTL generation for module 'embedded_system_nios2_qsys_0'
+Info: nios2_qsys_0:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/eperlcmd.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2 -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=embedded_system_nios2_qsys_0 --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8115_7273887384239116124.dir/0026_nios2_qsys_0_gen/ --quartus_bindir=D:/intelfpga_lite/18.1/quartus/bin64 --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8115_7273887384239116124.dir/0026_nios2_qsys_0_gen//embedded_system_nios2_qsys_0_processor_configuration.pl  --do_build_sim=0  ]
+Info: nios2_qsys_0: # 2019.08.06 23:30:25 (*) Starting Nios II generation
+Info: nios2_qsys_0: # 2019.08.06 23:30:25 (*)   Checking for plaintext license.
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)   Couldn't query license setup in Quartus directory D:/intelfpga_lite/18.1/quartus/bin64
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)   LM_LICENSE_FILE environment variable is empty
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)   Plaintext license not found.
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)   Checking for encrypted license (non-evaluation).
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)   Couldn't query license setup in Quartus directory D:/intelfpga_lite/18.1/quartus/bin64
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)   LM_LICENSE_FILE environment variable is empty
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)   Elaborating CPU configuration settings
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)   Creating all objects for CPU
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)     Testbench
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)     Instruction decoding
+Info: nios2_qsys_0: # 2019.08.06 23:30:26 (*)       Instruction fields
+Info: nios2_qsys_0: # 2019.08.06 23:30:27 (*)       Instruction decodes
+Info: nios2_qsys_0: # 2019.08.06 23:30:27 (*)       Signals for RTL simulation waveforms
+Info: nios2_qsys_0: # 2019.08.06 23:30:27 (*)       Instruction controls
+Info: nios2_qsys_0: # 2019.08.06 23:30:27 (*)     Pipeline frontend
+Info: nios2_qsys_0: # 2019.08.06 23:30:27 (*)     Pipeline backend
+Info: nios2_qsys_0: # 2019.08.06 23:30:29 (*)   Generating RTL from CPU objects
+Info: nios2_qsys_0: # 2019.08.06 23:30:31 (*)   Creating encrypted RTL
+Info: nios2_qsys_0: # 2019.08.06 23:30:32 (*) Done Nios II generation
+Info: nios2_qsys_0: Done RTL generation for module 'embedded_system_nios2_qsys_0'
+Info: nios2_qsys_0: "embedded_system" instantiated altera_nios2_qsys "nios2_qsys_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'embedded_system_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=embedded_system_onchip_memory2_0 --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8115_7273887384239116124.dir/0027_onchip_memory2_0_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8115_7273887384239116124.dir/0027_onchip_memory2_0_gen//embedded_system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'embedded_system_onchip_memory2_0'
+Info: onchip_memory2_0: "embedded_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "embedded_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "embedded_system" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "embedded_system" instantiated altera_reset_controller "rst_controller"
+Info: nios2_qsys_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_qsys_0_data_master_translator"
+Info: ad9833_comp_0_avalon_slave_0_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "ad9833_comp_0_avalon_slave_0_translator"
+Info: nios2_qsys_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_qsys_0_data_master_agent"
+Info: ad9833_comp_0_avalon_slave_0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "ad9833_comp_0_avalon_slave_0_agent"
+Info: ad9833_comp_0_avalon_slave_0_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "ad9833_comp_0_avalon_slave_0_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: nios2_qsys_0_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "nios2_qsys_0_data_master_limiter"
+Info: Reusing file D:/Cinna-BoN-FPGA/embedded_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file D:/Cinna-BoN-FPGA/embedded_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/Cinna-BoN-FPGA/embedded_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/Cinna-BoN-FPGA/embedded_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: embedded_system: Done "embedded_system" with 27 modules, 49 files
+Info: Generating third-party timing and resource estimation model ...
+Info: Done generating third-party timing and resource estimation model.
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

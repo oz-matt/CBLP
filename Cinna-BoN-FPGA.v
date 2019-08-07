@@ -1,19 +1,50 @@
-module CinnaBoNFPGA
+module CinnaBoNFPGA 
+  (input clk, 
+  output fsync,
+  output sclk,
+  output sdata
+  );
+  
+  reg[31:0] local_io;
+  reg send_complete;
+  reg good_to_reset_go;
+  
+  
+  embedded_system u0 (
+        .clk_clk            (clk),            //       clk.clk
+        .ad9833_io_readdata (local_io)  // ad9833_io.readdata
+    );
+	 
+	 assign fsync = local_io[2];
+	 assign sclk = local_io[3];
+	 assign sdata = local_io[4];
+	 
+	 assign send_complete = local_io[1];
+	 assign good_to_reset_go = local_io[0];
+
+  
+endmodule
+
+
+/*module CinnaBoNFPGA
   (input i_clk,
   output fsync,
   output sclk,
   output sdata,
-  output reg led);
+  output reg led,
+  output fsync2,
+  output sclk2,
+  output sdata2);
   
   reg go = 0;
   
   reg[15:0] control = 16'b0010000000000000;
-  reg[27:0] freq = 28'h00000f0;
+  reg[27:0] freq = 28'h000000f;
   
   reg [31:0] clk_ctr = 1;
 
   wire good_to_reset_go, send_complete;
-
+  
   ad9833if UUT
     (
     .clk(i_clk),
@@ -26,7 +57,7 @@ module CinnaBoNFPGA
     .sclk(sclk),
     .sdata(sdata)
     );
-	 
+
   always @(posedge i_clk)
   begin
     if(good_to_reset_go == 1) 
@@ -38,15 +69,19 @@ module CinnaBoNFPGA
 		  clk_ctr <= 1;
 		  led <= ~led;
 		  go <= 1;
-		  freq <= freq + 28'h00000f0;
+		  freq <= freq + 28'h000000f;
 		end
 	   else
 		  clk_ctr <= clk_ctr + 1;
 	 end
   end
+  
+  assign fsync2 = fsync;
+  assign sclk2 = sclk;
+  assign sdata2 = sdata;
 	 
 endmodule
-	 
+*/
 /*module CinnaBoNFPGA
   (input i_clk,
   output o_dac_clk,

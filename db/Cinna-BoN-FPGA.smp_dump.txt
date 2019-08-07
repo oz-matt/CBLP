@@ -1,11 +1,20 @@
 
-State Machine - |CinnaBoNFPGA|ad9833if:UUT|current_node
-Name current_node.CLEANUP current_node.SEND_COMPLETE current_node.FSYNC_WAIT_LOW_1 current_node.FSYNC_WAIT_HIGH_1 current_node.WORD_TRANSFER_1 current_node.START_FSYNC current_node.START_SCLK current_node.0000 
-current_node.0000 0 0 0 0 0 0 0 0 
+State Machine - |CinnaBoNFPGA|embedded_system:u0|embedded_system_nios2_qsys_0:nios2_qsys_0|embedded_system_nios2_qsys_0_nios2_oci:the_embedded_system_nios2_qsys_0_nios2_oci|embedded_system_nios2_qsys_0_jtag_debug_module_wrapper:the_embedded_system_nios2_qsys_0_jtag_debug_module_wrapper|embedded_system_nios2_qsys_0_jtag_debug_module_tck:the_embedded_system_nios2_qsys_0_jtag_debug_module_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 
+
+State Machine - |CinnaBoNFPGA|embedded_system:u0|ad9833_avalon:ad9833_comp_0|ad9833if:aif|current_node
+Name current_node.0000 current_node.SEND_COMPLETE current_node.FSYNC_WAIT_LOW_1 current_node.FSYNC_WAIT_HIGH_1 current_node.WORD_TRANSFER_1 current_node.START_FSYNC current_node.START_SCLK current_node.CLEANUP 
+current_node.CLEANUP 0 0 0 0 0 0 0 0 
 current_node.START_SCLK 0 0 0 0 0 0 1 1 
 current_node.START_FSYNC 0 0 0 0 0 1 0 1 
 current_node.WORD_TRANSFER_1 0 0 0 0 1 0 0 1 
 current_node.FSYNC_WAIT_HIGH_1 0 0 0 1 0 0 0 1 
 current_node.FSYNC_WAIT_LOW_1 0 0 1 0 0 0 0 1 
 current_node.SEND_COMPLETE 0 1 0 0 0 0 0 1 
-current_node.CLEANUP 1 0 0 0 0 0 0 1 
+current_node.0000 1 0 0 0 0 0 0 1 
