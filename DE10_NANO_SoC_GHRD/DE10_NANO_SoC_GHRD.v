@@ -114,7 +114,7 @@ assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_button
 
     soc_system u0 (
         .clk_clk                         (FPGA_CLK1_50),                         //    clk.clk
-        .reset_reset_n                   (hps_fpga_reset_n),                   //  reset.reset_n
+        .reset_reset_n                   (KEY[0]),                   //  reset.reset_n
         .memory_mem_a(HPS_DDR3_ADDR),                                //                         memory.mem_a
                .memory_mem_ba(HPS_DDR3_BA),                                 //                               .mem_ba
                .memory_mem_ck(HPS_DDR3_CK_P),                               //                               .mem_ck

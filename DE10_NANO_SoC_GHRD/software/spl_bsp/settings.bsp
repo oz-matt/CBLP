@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>spl</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Aug 21, 2019 4:18:12 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1566418692622</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Aug 24, 2019 5:56:56 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1566683816439</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>.\</BspGeneratedLocation>
         <BspSettingsFile>D:\Cinna-BoN-FPGA\DE10_NANO_SoC_GHRD\software\spl_bsp\settings.bsp</BspSettingsFile>
-        <HpsSettingsPath>..\..\hps_isw_handoff\soc_system_hps_0\</HpsSettingsPath>
+        <HpsSettingsPath>..\..\hps_isw_handoff\soc_system_hps_0</HpsSettingsPath>
         <JdiFile>default</JdiFile>
         <Cpu xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         <SchemaVersion>1.9</SchemaVersion>

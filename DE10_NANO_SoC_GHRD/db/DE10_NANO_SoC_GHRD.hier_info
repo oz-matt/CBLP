@@ -157,7 +157,7 @@ HPS_USB_DATA[7] <> <UNC>
 HPS_USB_DIR => ~NO_FANOUT~
 HPS_USB_NXT => ~NO_FANOUT~
 HPS_USB_STP << <GND>
-KEY[0] => ~NO_FANOUT~
+KEY[0] => KEY[0].IN1
 KEY[1] => ~NO_FANOUT~
 LED[0] << soc_system:u0.leds2_readdata
 LED[1] << soc_system:u0.leds2_readdata
