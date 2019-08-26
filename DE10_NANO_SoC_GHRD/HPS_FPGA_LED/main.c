@@ -50,14 +50,20 @@ usleep( 100*1000 );
 printf("6\n");
 	// toggle the LEDs a bit
 usleep( 100*1000 );
+
+*h2p_lw_led_addr = (uint32_t)0x00; 
+
 	while(1) {
 		printf("7\n");
 		// control led
-		*h2p_lw_led_addr = (uint32_t)0xFF; 
+		*h2p_lw_led_addr |= (uint32_t)0x10; 
 
 		// wait 100ms
 		usleep( 100*1000 );
-		*h2p_lw_led_addr = (uint32_t)0x00; 
+		*h2p_lw_led_addr &= (uint32_t)0xFFFFFFEF; 
+		
+		if(*h2p_lw_led_addr & 0x01)printf("1");
+		
 
 		// wait 100ms
 		usleep( 100*1000 );

@@ -10,6 +10,7 @@
 			hps_io_hps_io_uart0_inst_RX : in    std_logic                     := 'X';             -- hps_io_uart0_inst_RX
 			hps_io_hps_io_uart0_inst_TX : out   std_logic;                                        -- hps_io_uart0_inst_TX
 			leds2_readdata              : out   std_logic_vector(7 downto 0);                     -- readdata
+			leds2_writedata             : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- writedata
 			memory_mem_a                : out   std_logic_vector(14 downto 0);                    -- mem_a
 			memory_mem_ba               : out   std_logic_vector(2 downto 0);                     -- mem_ba
 			memory_mem_ck               : out   std_logic;                                        -- mem_ck

@@ -11,14 +11,15 @@ module custom_leds
     input  logic [31:0] avs_s0_writedata,   // avs_s0.writedata
     
     // The LED outputs
-    output logic [7:0]  leds
+    output logic [7:0]  leds,
+	 input logic [3:0]  sw
 );
 
 // Read operations performed on the Avalon-MM Slave interface
 always_comb begin
     if (avs_s0_read) begin
         case (avs_s0_address)
-            1'b0    : avs_s0_readdata = {24'b0, leds};
+            1'b0    : avs_s0_readdata = {28'b0, sw};
             default : avs_s0_readdata = 'x;
         endcase
     end else begin

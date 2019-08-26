@@ -14,6 +14,7 @@ module soc_system (
 		input  wire        hps_io_hps_io_uart0_inst_RX, //       .hps_io_uart0_inst_RX
 		output wire        hps_io_hps_io_uart0_inst_TX, //       .hps_io_uart0_inst_TX
 		output wire [7:0]  leds2_readdata,              //  leds2.readdata
+		input  wire [3:0]  leds2_writedata,             //       .writedata
 		output wire [14:0] memory_mem_a,                // memory.mem_a
 		output wire [2:0]  memory_mem_ba,               //       .mem_ba
 		output wire        memory_mem_ck,               //       .mem_ck
@@ -86,7 +87,8 @@ module soc_system (
 		.avs_s0_write     (mm_interconnect_0_custom_leds_0_s0_write),     //            .write
 		.avs_s0_readdata  (mm_interconnect_0_custom_leds_0_s0_readdata),  //            .readdata
 		.avs_s0_writedata (mm_interconnect_0_custom_leds_0_s0_writedata), //            .writedata
-		.leds             (leds2_readdata)                                // conduit_end.readdata
+		.leds             (leds2_readdata),                               // conduit_end.readdata
+		.sw               (leds2_writedata)                               //            .writedata
 	);
 
 	soc_system_hps_0 #(

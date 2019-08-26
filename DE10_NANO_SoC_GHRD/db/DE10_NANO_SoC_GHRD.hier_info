@@ -167,10 +167,10 @@ LED[4] << soc_system:u0.leds2_readdata
 LED[5] << soc_system:u0.leds2_readdata
 LED[6] << soc_system:u0.leds2_readdata
 LED[7] << soc_system:u0.leds2_readdata
-SW[0] => ~NO_FANOUT~
-SW[1] => ~NO_FANOUT~
-SW[2] => ~NO_FANOUT~
-SW[3] => ~NO_FANOUT~
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
 
 
 |DE10_NANO_SoC_GHRD|soc_system:u0
@@ -191,6 +191,10 @@ leds2_readdata[4] <= custom_leds:custom_leds_0.leds
 leds2_readdata[5] <= custom_leds:custom_leds_0.leds
 leds2_readdata[6] <= custom_leds:custom_leds_0.leds
 leds2_readdata[7] <= custom_leds:custom_leds_0.leds
+leds2_writedata[0] => leds2_writedata[0].IN1
+leds2_writedata[1] => leds2_writedata[1].IN1
+leds2_writedata[2] => leds2_writedata[2].IN1
+leds2_writedata[3] => leds2_writedata[3].IN1
 memory_mem_a[0] <= soc_system_hps_0:hps_0.mem_a
 memory_mem_a[1] <= soc_system_hps_0:hps_0.mem_a
 memory_mem_a[2] <= soc_system_hps_0:hps_0.mem_a
@@ -293,14 +297,14 @@ avs_s0_write => leds.OUTPUTSELECT
 avs_s0_write => leds.OUTPUTSELECT
 avs_s0_write => leds.OUTPUTSELECT
 avs_s0_write => leds.OUTPUTSELECT
-avs_s0_readdata[0] <= leds[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-avs_s0_readdata[1] <= leds[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-avs_s0_readdata[2] <= leds[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-avs_s0_readdata[3] <= leds[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-avs_s0_readdata[4] <= leds[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-avs_s0_readdata[5] <= leds[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-avs_s0_readdata[6] <= leds[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-avs_s0_readdata[7] <= leds[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[0] <= sw[0].DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[1] <= sw[1].DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[2] <= sw[2].DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[3] <= sw[3].DB_MAX_OUTPUT_PORT_TYPE
+avs_s0_readdata[4] <= <GND>
+avs_s0_readdata[5] <= <GND>
+avs_s0_readdata[6] <= <GND>
+avs_s0_readdata[7] <= <GND>
 avs_s0_readdata[8] <= <GND>
 avs_s0_readdata[9] <= <GND>
 avs_s0_readdata[10] <= <GND>
@@ -365,6 +369,10 @@ leds[4] <= leds[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 leds[5] <= leds[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 leds[6] <= leds[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 leds[7] <= leds[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sw[0] => avs_s0_readdata[0].DATAIN
+sw[1] => avs_s0_readdata[1].DATAIN
+sw[2] => avs_s0_readdata[2].DATAIN
+sw[3] => avs_s0_readdata[3].DATAIN
 
 
 |DE10_NANO_SoC_GHRD|soc_system:u0|soc_system_hps_0:hps_0

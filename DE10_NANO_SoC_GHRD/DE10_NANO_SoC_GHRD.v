@@ -140,7 +140,8 @@ assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_button
                //HPS UART
                .hps_io_hps_io_uart0_inst_RX(HPS_UART_RX),             //                               .hps_io_uart0_inst_RX
                .hps_io_hps_io_uart0_inst_TX(HPS_UART_TX),             //                               .hps_io_uart0_inst_TX
-               .leds2_readdata                  (LED[7:0])                   //  leds2.readdata
+               .leds2_readdata                  (LED[7:0]),                   //  leds2.readdata
+               .leds2_writedata                  (SW[3:0])                   //  leds2.readdata
     );
 
 /*
