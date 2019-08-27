@@ -1,32 +1,4 @@
-module CinnaBoNFPGA 
-  (input clk, 
-  output fsync,
-  output sclk,
-  output sdata
-  );
-  
-  reg[31:0] local_io;
-  //reg send_complete;
-  //reg good_to_reset_go;
-  
-  
-  embedded_system u0 (
-        .clk_clk            (clk),            //       clk.clk
-        .ad9833_io_readdata (local_io)  // ad9833_io.readdata
-    );
-	 
-	 assign fsync = local_io[2];
-	 assign sclk = local_io[3];
-	 assign sdata = local_io[4];
-	 
-	 //assign send_complete = local_io[1];
-	 //assign good_to_reset_go = local_io[0];
-
-  
-endmodule
-
-
-/*module CinnaBoNFPGA
+module CinnaBoNFPGA
   (input i_clk,
   output fsync,
   output sclk,
@@ -81,7 +53,7 @@ endmodule
   assign sdata2 = sdata;
 	 
 endmodule
-*/
+
 /*module CinnaBoNFPGA
   (input i_clk,
   output o_dac_clk,

@@ -16,7 +16,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "led",
+					"strict" : false
+				},
+				{
+					"name" : "fsync2",
+					"strict" : false
+				},
+				{
+					"name" : "sclk2",
+					"strict" : false
+				},
+				{
+					"name" : "sdata2",
+					"strict" : false
+				},
+				{
+					"name" : "i_clk",
 					"strict" : false
 				}
 			]

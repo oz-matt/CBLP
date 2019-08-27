@@ -2,19 +2,15 @@ module ad9833if
   #(parameter CLKS_PER_BIT = 250)
   (
   input clk,
-  input resetn,
   input go,
-  input[3:0] byteenable,
-  input[31:0] datain,
+  input[15:0] control,
+  input[27:0] freq,
   output reg good_to_reset_go = 0,
   output reg send_complete = 0,
-  output reg fsync = 1,
+  output reg fsync,
   output reg sclk = 0,
   output reg sdata = 0
   );
-  
-  reg[27:0] local_freq = 0;
-  reg[15:0] local_control = 0;
 
   //State machine nodes
   parameter IDLE 			= 4'b0000;
@@ -38,28 +34,16 @@ module ad9833if
   //reg[15:0] adreg0 = 16'b0100000000001000;
   //reg[15:0] adreg1 = 16'b0100000000000000;
   
-  assign adreg0 = 16'h4000 | local_freq[13:0];
-  assign adreg1 = 16'h4000 | local_freq[27:14];
+  assign adreg0 = 16'h4000 | freq[13:0];
+  assign adreg1 = 16'h4000 | freq[27:14];
   
   always @(posedge clk)
   begin
-  
-    if(!resetn)
-	 begin
-		fsync <= 1;
-		current_node <= CLEANUP;
-	 end
-	 else
-	 begin
-	 if(byteenable[0])
-	   local_freq <= datain[27:0];
-	 else if (byteenable[1])
-	   local_control <= datain[15:0];
-  
     case(current_node)
   
     IDLE:
-      begin  
+      begin
+		  fsync <= 1;
         if (go)
           current_node <= START_SCLK;
       end
@@ -99,7 +83,7 @@ module ad9833if
         begin
           sclk <= 0;
           if (word_ctr == 0)
-            sdata <= local_control[15-bit_ctr];
+            sdata <= control[15-bit_ctr];
           else if (word_ctr == 1)
             sdata <= adreg0[15-bit_ctr];
           else
@@ -173,8 +157,6 @@ module ad9833if
       end
 
     endcase
-	 
-	 end
   end
 
 endmodule

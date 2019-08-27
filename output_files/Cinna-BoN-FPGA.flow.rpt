@@ -1,5 +1,5 @@
 Flow report for Cinna-BoN-FPGA
-Wed Aug 07 14:36:16 2019
+Tue Aug 27 16:05:11 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Aug 07 14:36:16 2019       ;
+; Flow Status                     ; Successful - Tue Aug 27 16:05:11 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Cinna-BoN-FPGA                              ;
 ; Top-level Entity Name           ; CinnaBoNFPGA                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEBA6U23I7                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 611 / 41,910 ( 1 % )                        ;
-; Total registers                 ; 879                                         ;
-; Total pins                      ; 4 / 314 ( 1 % )                             ;
+; Logic utilization (in ALMs)     ; 109 / 41,910 ( < 1 % )                      ;
+; Total registers                 ; 138                                         ;
+; Total pins                      ; 8 / 314 ( 3 % )                             ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 43,008 / 5,662,720 ( < 1 % )                ;
+; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 112 ( 0 % )                             ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/07/2019 14:34:20 ;
+; Start date & time ; 08/27/2019 16:04:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Cinna-BoN-FPGA      ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------------------+----------------+-----------------+----------------+
 ; Assignment Name                     ; Value                                                             ; Default Value  ; Entity Name     ; Section Id     ;
 +-------------------------------------+-------------------------------------------------------------------+----------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1095490343351.156520286009744                                     ; --             ; --              ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1095490343351.156693625004708                                     ; --             ; --              ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                       ; --             ; --              ; eda_simulation ;
 ; EDA_RUN_TOOL_AUTOMATICALLY          ; Off                                                               ; --             ; --              ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                         ; <None>         ; --              ; --             ;
@@ -109,12 +109,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:28     ; 1.0                     ; 804 MB              ; 00:00:53                           ;
-; Fitter               ; 00:00:57     ; 1.1                     ; 2512 MB             ; 00:02:05                           ;
-; Assembler            ; 00:00:10     ; 1.0                     ; 712 MB              ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:09     ; 1.4                     ; 1104 MB             ; 00:00:11                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 617 MB              ; 00:00:03                           ;
-; Total                ; 00:01:47     ; --                      ; --                  ; 00:03:19                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 691 MB              ; 00:00:23                           ;
+; Fitter               ; 00:00:32     ; 1.0                     ; 2346 MB             ; 00:01:01                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 699 MB              ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 1025 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 599 MB              ; 00:00:01                           ;
+; Total                ; 00:00:56     ; --                      ; --                  ; 00:01:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
