@@ -253,7 +253,7 @@ refer to the applicable agreement for further details.
 		(text "oct_rzqin" (rect 294 307 642 624)(font "Arial" (color 0 0 0)))
 		(text "reset" (rect 131 291 292 595)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "reset_n" (rect 165 315 372 640)(font "Arial" (color 0 0 0)))
-		(text " soc_system " (rect 440 336 952 682)(font "Arial" ))
+		(text " system " (rect 461 336 970 682)(font "Arial" ))
 		(line (pt 160 32)(pt 336 32)(line_width 1))
 		(line (pt 336 32)(pt 336 336)(line_width 1))
 		(line (pt 160 336)(pt 336 336)(line_width 1))

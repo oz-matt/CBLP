@@ -9,6 +9,7 @@
 		.hps_io_hps_io_uart0_inst_RX (<connected-to-hps_io_hps_io_uart0_inst_RX>), //       .hps_io_uart0_inst_RX
 		.hps_io_hps_io_uart0_inst_TX (<connected-to-hps_io_hps_io_uart0_inst_TX>), //       .hps_io_uart0_inst_TX
 		.leds2_readdata              (<connected-to-leds2_readdata>),              //  leds2.readdata
+		.leds2_writedata             (<connected-to-leds2_writedata>),             //       .writedata
 		.memory_mem_a                (<connected-to-memory_mem_a>),                // memory.mem_a
 		.memory_mem_ba               (<connected-to-memory_mem_ba>),               //       .mem_ba
 		.memory_mem_ck               (<connected-to-memory_mem_ck>),               //       .mem_ck

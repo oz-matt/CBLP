@@ -10,6 +10,7 @@
 			hps_io_hps_io_uart0_inst_RX : in    std_logic                     := 'X';             -- hps_io_uart0_inst_RX
 			hps_io_hps_io_uart0_inst_TX : out   std_logic;                                        -- hps_io_uart0_inst_TX
 			leds2_readdata              : out   std_logic_vector(7 downto 0);                     -- readdata
+			leds2_writedata             : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- writedata
 			memory_mem_a                : out   std_logic_vector(14 downto 0);                    -- mem_a
 			memory_mem_ba               : out   std_logic_vector(2 downto 0);                     -- mem_ba
 			memory_mem_ck               : out   std_logic;                                        -- mem_ck
@@ -42,6 +43,7 @@
 			hps_io_hps_io_uart0_inst_RX => CONNECTED_TO_hps_io_hps_io_uart0_inst_RX, --       .hps_io_uart0_inst_RX
 			hps_io_hps_io_uart0_inst_TX => CONNECTED_TO_hps_io_hps_io_uart0_inst_TX, --       .hps_io_uart0_inst_TX
 			leds2_readdata              => CONNECTED_TO_leds2_readdata,              --  leds2.readdata
+			leds2_writedata             => CONNECTED_TO_leds2_writedata,             --       .writedata
 			memory_mem_a                => CONNECTED_TO_memory_mem_a,                -- memory.mem_a
 			memory_mem_ba               => CONNECTED_TO_memory_mem_ba,               --       .mem_ba
 			memory_mem_ck               => CONNECTED_TO_memory_mem_ck,               --       .mem_ck

@@ -10,6 +10,7 @@ module soc_system (
 	hps_io_hps_io_uart0_inst_RX,
 	hps_io_hps_io_uart0_inst_TX,
 	leds2_readdata,
+	leds2_writedata,
 	memory_mem_a,
 	memory_mem_ba,
 	memory_mem_ck,
@@ -38,6 +39,7 @@ module soc_system (
 	input		hps_io_hps_io_uart0_inst_RX;
 	output		hps_io_hps_io_uart0_inst_TX;
 	output	[7:0]	leds2_readdata;
+	input	[3:0]	leds2_writedata;
 	output	[14:0]	memory_mem_a;
 	output	[2:0]	memory_mem_ba;
 	output		memory_mem_ck;
