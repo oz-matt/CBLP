@@ -81,11 +81,25 @@ module DE10_NANO_SoC_GHRD(
     output   [ 7: 0]    LED,
 
     //////////// SW //////////
-    input    [ 3: 0]    SW
+    input    [ 3: 0]    SW,
+	 
+  output fsync,
+  output sclk,
+  output sdata,
+  output fsync2,
+  output sclk2,
+  output sdata2
 );
 
 
-
+  reg go = 0;
+  
+  reg[15:0] control = 16'b0010000000000000;
+  
+ wire good_to_reset_go, send_complete; 
+ wire[31:0] freq_cxn;
+ 
+  
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
@@ -110,9 +124,21 @@ assign fpga_clk_50 = FPGA_CLK1_50;
 assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_buttons};
 */
 
+/*ad9833if u0 
+  (
+  .clk(FPGA_CLK1_50),
+  .go(go),
+  .control(control),
+  .freq(freq_cxn),
+  .good_to_reset_go(good_to_reset_go),
+  .send_complete(send_complete),
+	  .fsync(fsync),
+  .sclk(sclk),
+  .sdata(sdata)
+  );*/
 
 
-    freq_system u0 (
+    freq_system u1 (
         .clk_clk                         (FPGA_CLK1_50),                         //    clk.clk
         .reset_reset_n                   (KEY[0]),                   //  reset.reset_n
         .memory_mem_a(HPS_DDR3_ADDR),                                //                         memory.mem_a
@@ -140,10 +166,28 @@ assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_button
                //HPS UART
                .hps_io_hps_io_uart0_inst_RX(HPS_UART_RX),             //                               .hps_io_uart0_inst_RX
                .hps_io_hps_io_uart0_inst_TX(HPS_UART_TX),             //                               .hps_io_uart0_inst_TX
-               .freq1_readdata                  (LED[7:0]),                   //  leds2.readdata
+               .freq1_readdata                  (freq_cxn),                   //  leds2.readdata
                .freq1_writedata                  (SW[3:0])                   //  leds2.readdata
     );
 
+	 /*always @(posedge FPGA_CLK1_50)
+  begin
+    if(good_to_reset_go == 1) 
+	   go <= 0;
+		
+	if(r_freq_cxn != freq_cxn) 
+	   go <= 1;
+    
+  end*/
+  
+  
+  assign fsync2 = fsync;
+  assign sclk2 = sclk;
+  assign sdata2 = sdata;
+  
+  assign LED[7:0] = freq_cxn[7:0];
+  
+  
 /*
 //=======================================================
 //  Structural coding
