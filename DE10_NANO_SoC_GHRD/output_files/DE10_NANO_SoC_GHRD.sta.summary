@@ -7,7 +7,7 @@ Slack : 1.574
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Setup 'FPGA_CLK1_50'
-Slack : 14.071
+Slack : 12.511
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Hold 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -15,7 +15,7 @@ Slack : 0.164
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Hold 'FPGA_CLK1_50'
-Slack : 0.303
+Slack : 0.258
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Recovery 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -23,7 +23,7 @@ Slack : 3.040
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Recovery 'FPGA_CLK1_50'
-Slack : 17.577
+Slack : 16.340
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Removal 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -31,7 +31,7 @@ Slack : 0.562
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Removal 'FPGA_CLK1_50'
-Slack : 0.674
+Slack : 0.678
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Minimum Pulse Width 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
@@ -43,7 +43,7 @@ Slack : 0.540
 TNS   : 0.000
 
 Type  : Slow 1100mV 100C Model Minimum Pulse Width 'FPGA_CLK1_50'
-Slack : 9.185
+Slack : 9.187
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Setup 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -51,7 +51,7 @@ Slack : 1.573
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Setup 'FPGA_CLK1_50'
-Slack : 14.121
+Slack : 12.685
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Hold 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -59,7 +59,7 @@ Slack : 0.216
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Hold 'FPGA_CLK1_50'
-Slack : 0.260
+Slack : 0.225
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Recovery 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -67,7 +67,7 @@ Slack : 3.130
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Recovery 'FPGA_CLK1_50'
-Slack : 17.714
+Slack : 16.507
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Removal 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -75,7 +75,7 @@ Slack : 0.590
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Removal 'FPGA_CLK1_50'
-Slack : 0.627
+Slack : 0.625
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Minimum Pulse Width 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
@@ -87,7 +87,7 @@ Slack : 0.546
 TNS   : 0.000
 
 Type  : Slow 1100mV -40C Model Minimum Pulse Width 'FPGA_CLK1_50'
-Slack : 9.311
+Slack : 9.313
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Setup 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -95,7 +95,7 @@ Slack : 2.113
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Setup 'FPGA_CLK1_50'
-Slack : 17.006
+Slack : 15.727
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Hold 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -103,7 +103,7 @@ Slack : 0.083
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Hold 'FPGA_CLK1_50'
-Slack : 0.160
+Slack : 0.152
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Recovery 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -111,11 +111,11 @@ Slack : 3.731
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Recovery 'FPGA_CLK1_50'
-Slack : 18.577
+Slack : 17.739
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Removal 'FPGA_CLK1_50'
-Slack : 0.289
+Slack : 0.303
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Removal 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -131,7 +131,7 @@ Slack : 0.891
 TNS   : 0.000
 
 Type  : Fast 1100mV 100C Model Minimum Pulse Width 'FPGA_CLK1_50'
-Slack : 9.113
+Slack : 9.112
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Setup 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -139,7 +139,7 @@ Slack : 2.113
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Setup 'FPGA_CLK1_50'
-Slack : 17.396
+Slack : 16.373
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Hold 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -147,7 +147,7 @@ Slack : 0.076
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Hold 'FPGA_CLK1_50'
-Slack : 0.141
+Slack : 0.148
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Recovery 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -155,11 +155,11 @@ Slack : 3.843
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Recovery 'FPGA_CLK1_50'
-Slack : 18.803
+Slack : 18.159
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Removal 'FPGA_CLK1_50'
-Slack : 0.251
+Slack : 0.262
 TNS   : 0.000
 
 Type  : Fast 1100mV -40C Model Removal 'freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'

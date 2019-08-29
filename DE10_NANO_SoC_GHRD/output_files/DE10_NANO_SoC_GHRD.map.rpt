@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE10_NANO_SoC_GHRD
-Thu Aug 29 17:09:54 2019
+Thu Aug 29 17:26:23 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -214,7 +214,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Aug 29 17:09:53 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu Aug 29 17:26:22 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; DE10_NANO_SoC_GHRD                          ;
 ; Top-level Entity Name           ; DE10_NANO_SoC_GHRD                          ;
@@ -334,8 +334,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -4121,7 +4120,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Aug 29 17:03:57 2019
+    Info: Processing started: Thu Aug 29 17:23:12 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE10_NANO_SoC_GHRD -c DE10_NANO_SoC_GHRD
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -4238,123 +4237,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file freq_sy
     Info (12023): Found entity 1: custom_freq File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/freq_system/synthesis/submodules/custom_freq.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ad9833if.v
     Info (12023): Found entity 1: ad9833if File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/ad9833if.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/soc_system.v
-    Info (12023): Found entity 1: soc_system File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/soc_system.v Line: 6
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_reset_controller.v
-    Info (12023): Found entity 1: altera_reset_controller File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_reset_controller.v Line: 42
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_reset_synchronizer.v
-    Info (12023): Found entity 1: altera_reset_synchronizer File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_reset_synchronizer.v Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0.v
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0 File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_mm_interconnect_0.v Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_mux File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux.sv Line: 51
-Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
-    Info (12023): Found entity 1: altera_merlin_arbitrator File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv Line: 103
-    Info (12023): Found entity 2: altera_merlin_arb_adder File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv Line: 228
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_rsp_demux File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux.sv Line: 43
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_mux File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux.sv Line: 51
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_cmd_demux File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux.sv Line: 43
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_burst_adapter.sv
-    Info (12023): Found entity 1: altera_merlin_burst_adapter File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_burst_adapter.sv Line: 21
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
-    Info (12023): Found entity 1: altera_merlin_burst_adapter_uncompressed_only File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv Line: 39
-Info (12021): Found 5 design units, including 5 entities, in source file soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv
-    Info (12023): Found entity 1: altera_merlin_burst_adapter_burstwrap_increment File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 40
-    Info (12023): Found entity 2: altera_merlin_burst_adapter_adder File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 55
-    Info (12023): Found entity 3: altera_merlin_burst_adapter_subtractor File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 77
-    Info (12023): Found entity 4: altera_merlin_burst_adapter_min File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 98
-    Info (12023): Found entity 5: altera_merlin_burst_adapter_13_1 File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 264
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_burst_adapter_new.sv
-    Info (12023): Found entity 1: altera_merlin_burst_adapter_new File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_burst_adapter_new.sv Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_incr_burst_converter.sv
-    Info (12023): Found entity 1: altera_incr_burst_converter File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_incr_burst_converter.sv Line: 28
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_wrap_burst_converter.sv
-    Info (12023): Found entity 1: altera_wrap_burst_converter File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_wrap_burst_converter.sv Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_default_burst_converter.sv
-    Info (12023): Found entity 1: altera_default_burst_converter File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_default_burst_converter.sv Line: 30
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
-    Info (12023): Found entity 1: altera_merlin_address_alignment File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv Line: 26
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
-    Info (12023): Found entity 1: altera_avalon_st_pipeline_stage File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
-    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v Line: 22
-Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_002.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_002_default_decode File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_002.sv Line: 45
-    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router_002 File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_002.sv Line: 84
-Info (12021): Found 2 design units, including 2 entities, in source file soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router.sv
-    Info (12023): Found entity 1: soc_system_mm_interconnect_0_router_default_decode File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router.sv Line: 45
-    Info (12023): Found entity 2: soc_system_mm_interconnect_0_router File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router.sv Line: 84
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
-    Info (12023): Found entity 1: altera_avalon_sc_fifo File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_slave_agent.sv
-    Info (12023): Found entity 1: altera_merlin_slave_agent File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv Line: 34
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
-    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv
-    Info (12023): Found entity 1: altera_merlin_axi_master_ni File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_merlin_slave_translator.sv
-    Info (12023): Found entity 1: altera_merlin_slave_translator File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_merlin_slave_translator.sv Line: 35
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_hps_0.v
-    Info (12023): Found entity 1: soc_system_hps_0 File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_hps_0.v Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_hps_0_hps_io.v
-    Info (12023): Found entity 1: soc_system_hps_0_hps_io File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_hps_0_hps_io.v Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram.v
-    Info (12023): Found entity 1: hps_sdram File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram.v Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv
-    Info (12023): Found entity 1: altdq_dqs2_acv_connect_to_hard_phy_cyclonev File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv Line: 19
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_mem_if_dll_cyclonev.sv
-    Info (12023): Found entity 1: altera_mem_if_dll_cyclonev File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_mem_if_dll_cyclonev.sv Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv
-    Info (12023): Found entity 1: altera_mem_if_hard_memory_controller_top_cyclonev File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv Line: 18
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v
-    Info (12023): Found entity 1: altera_mem_if_hhp_qseq_synth_top File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/altera_mem_if_oct_cyclonev.sv
-    Info (12023): Found entity 1: altera_mem_if_oct_cyclonev File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/altera_mem_if_oct_cyclonev.sv Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0.sv
-    Info (12023): Found entity 1: hps_sdram_p0 File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0.sv Line: 18
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v
-    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_addr_cmd_pads File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v
-    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_io_pads File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v
-    Info (12023): Found entity 1: hps_sdram_p0_acv_hard_memphy File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v Line: 21
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_acv_ldc.v
-    Info (12023): Found entity 1: hps_sdram_p0_acv_ldc File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0_acv_ldc.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_altdqdqs.v
-    Info (12023): Found entity 1: hps_sdram_p0_altdqdqs File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0_altdqdqs.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v
-    Info (12023): Found entity 1: hps_sdram_p0_clock_pair_generator File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v Line: 28
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_generic_ddio.v
-    Info (12023): Found entity 1: hps_sdram_p0_generic_ddio File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0_generic_ddio.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_iss_probe.v
-    Info (12023): Found entity 1: hps_sdram_p0_iss_probe File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0_iss_probe.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_phy_csr.sv
-    Info (12023): Found entity 1: hps_sdram_p0_phy_csr File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0_phy_csr.sv Line: 31
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_reset.v
-    Info (12023): Found entity 1: hps_sdram_p0_reset File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0_reset.v Line: 18
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_p0_reset_sync.v
-    Info (12023): Found entity 1: hps_sdram_p0_reset_sync File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_p0_reset_sync.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/hps_sdram_pll.sv
-    Info (12023): Found entity 1: hps_sdram_pll File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_pll.sv Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sv
-    Info (12023): Found entity 1: soc_system_hps_0_hps_io_border File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sv Line: 14
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/soc_system_hps_0_fpga_interfaces.sv
-    Info (12023): Found entity 1: soc_system_hps_0_fpga_interfaces File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/soc_system_hps_0_fpga_interfaces.sv Line: 14
-Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/custom_leds.sv
-    Info (12023): Found entity 1: custom_leds File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/custom_leds.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file de10_nano_soc_ghrd.v
     Info (12023): Found entity 1: DE10_NANO_SoC_GHRD File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/DE10_NANO_SoC_GHRD.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file soc_system/synthesis/submodules/custom_freq.sv
     Info (12023): Found entity 1: custom_freq File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/custom_freq.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at hps_sdram_pll.sv(168): created implicit net for "pll_dr_clk" File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/freq_system/synthesis/submodules/hps_sdram_pll.sv Line: 168
-Warning (10236): Verilog HDL Implicit Net warning at hps_sdram_pll.sv(168): created implicit net for "pll_dr_clk" File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/soc_system/synthesis/submodules/hps_sdram_pll.sv Line: 168
 Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(16): Parameter Declaration in module "ad9833if" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/ad9833if.v Line: 16
 Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(17): Parameter Declaration in module "ad9833if" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/ad9833if.v Line: 17
 Warning (10222): Verilog HDL Parameter Declaration warning at ad9833if.v(18): Parameter Declaration in module "ad9833if" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/ad9833if.v Line: 18
@@ -4430,6 +4317,7 @@ Info (12128): Elaborating entity "hps_sdram_p0_clock_pair_generator" for hierarc
 Info (12128): Elaborating entity "hps_sdram_p0_altdqdqs" for hierarchy "freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_p0:p0|hps_sdram_p0_acv_hard_memphy:umemphy|hps_sdram_p0_acv_hard_io_pads:uio_pads|hps_sdram_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs" File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/freq_system/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v Line: 317
 Info (12128): Elaborating entity "altdq_dqs2_acv_connect_to_hard_phy_cyclonev" for hierarchy "freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_p0:p0|hps_sdram_p0_acv_hard_memphy:umemphy|hps_sdram_p0_acv_hard_io_pads:uio_pads|hps_sdram_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_acv_connect_to_hard_phy_cyclonev:altdq_dqs2_inst" File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/freq_system/synthesis/submodules/hps_sdram_p0_altdqdqs.v Line: 146
 Info (12128): Elaborating entity "altera_mem_if_hhp_qseq_synth_top" for hierarchy "freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|altera_mem_if_hhp_qseq_synth_top:seq" File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/freq_system/synthesis/submodules/hps_sdram.v Line: 238
+Warning (12158): Entity "altera_mem_if_hhp_qseq_synth_top" contains only dangling pins File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/freq_system/synthesis/submodules/hps_sdram.v Line: 238
 Info (12128): Elaborating entity "altera_mem_if_hard_memory_controller_top_cyclonev" for hierarchy "freq_system:u1|freq_system_hps_0:hps_0|freq_system_hps_0_hps_io:hps_io|freq_system_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|altera_mem_if_hard_memory_controller_top_cyclonev:c0" File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/freq_system/synthesis/submodules/hps_sdram.v Line: 794
 Warning (10230): Verilog HDL assignment warning at altera_mem_if_hard_memory_controller_top_cyclonev.sv(1166): truncated value with size 320 to match size of target (1) File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/freq_system/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv Line: 1166
 Warning (10230): Verilog HDL assignment warning at altera_mem_if_hard_memory_controller_top_cyclonev.sv(1167): truncated value with size 320 to match size of target (1) File: D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/freq_system/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv Line: 1167
@@ -4591,20 +4479,6 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 62 registers lost all their fanouts during netlist optimizations.
 Info (286031): Timing-Driven Synthesis is running on partition "freq_system_hps_0_hps_io_border:border"
-Warning (20013): Ignored 19 assignments for entity "soc_system" -- entity does not exist in design
-Warning (20013): Ignored 1691 assignments for entity "soc_system_hps_0" -- entity does not exist in design
-Warning (20013): Ignored 1340 assignments for entity "soc_system_hps_0_fpga_interfaces" -- entity does not exist in design
-Warning (20013): Ignored 1337 assignments for entity "soc_system_hps_0_hps_io" -- entity does not exist in design
-Warning (20013): Ignored 1350 assignments for entity "soc_system_hps_0_hps_io_border" -- entity does not exist in design
-Warning (20013): Ignored 12 assignments for entity "soc_system_mm_interconnect_0" -- entity does not exist in design
-Warning (20013): Ignored 32 assignments for entity "soc_system_mm_interconnect_0_avalon_st_adapter" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "soc_system_mm_interconnect_0_cmd_demux" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "soc_system_mm_interconnect_0_cmd_mux" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "soc_system_mm_interconnect_0_router" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "soc_system_mm_interconnect_0_router_002" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "soc_system_mm_interconnect_0_rsp_demux" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "soc_system_mm_interconnect_0_rsp_mux" -- entity does not exist in design
 Info (144001): Generated suppressed messages file D:/Cinna-BoN-FPGA/DE10_NANO_SoC_GHRD/output_files/DE10_NANO_SoC_GHRD.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 10 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -4629,11 +4503,11 @@ Info (21057): Implemented 1192 device resources after synthesis - the final reso
     Info (21060): Implemented 71 bidirectional pins
     Info (21061): Implemented 371 logic cells
     Info (21066): Implemented 1 delay-locked loops
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 195 warnings
-    Info: Peak virtual memory: 926 megabytes
-    Info: Processing ended: Thu Aug 29 17:09:54 2019
-    Info: Elapsed time: 00:05:57
-    Info: Total CPU time (on all processors): 00:06:09
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 181 warnings
+    Info: Peak virtual memory: 901 megabytes
+    Info: Processing ended: Thu Aug 29 17:26:23 2019
+    Info: Elapsed time: 00:03:11
+    Info: Total CPU time (on all processors): 00:03:23
 
 
 +------------------------------------------+

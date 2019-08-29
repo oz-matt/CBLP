@@ -474,7 +474,6 @@ set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
 set_global_assignment -name ECO_REGENERATE_REPORT ON
 set_global_assignment -name QIP_FILE freq_system/synthesis/freq_system.qip
 set_global_assignment -name VERILOG_FILE ad9833if.v
-set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
 set_global_assignment -name VERILOG_FILE DE10_NANO_SoC_GHRD.v
 set_global_assignment -name SDC_FILE DE10_NANO_SOC_GHRD.sdc
 set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/custom_freq.sv
