@@ -5,3 +5,14 @@ state.ST_IDLE 0 0 0 0
 state.ST_COMP_TRANS 1 0 0 1 
 state.ST_UNCOMP_TRANS 1 0 1 0 
 state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE10_NANO_SoC_GHRD|ad9833if:u0|current_node
+Name current_node.CLEANUP current_node.SEND_COMPLETE current_node.FSYNC_WAIT_LOW_1 current_node.FSYNC_WAIT_HIGH_1 current_node.WORD_TRANSFER_1 current_node.START_FSYNC current_node.START_SCLK current_node.0000 
+current_node.0000 0 0 0 0 0 0 0 0 
+current_node.START_SCLK 0 0 0 0 0 0 1 1 
+current_node.START_FSYNC 0 0 0 0 0 1 0 1 
+current_node.WORD_TRANSFER_1 0 0 0 0 1 0 0 1 
+current_node.FSYNC_WAIT_HIGH_1 0 0 0 1 0 0 0 1 
+current_node.FSYNC_WAIT_LOW_1 0 0 1 0 0 0 0 1 
+current_node.SEND_COMPLETE 0 1 0 0 0 0 0 1 
+current_node.CLEANUP 1 0 0 0 0 0 0 1 

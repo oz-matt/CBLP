@@ -93,11 +93,13 @@ module DE10_NANO_SoC_GHRD(
 
 
   reg go = 0;
+  reg r_good_to_reset_go = 0;
   
   reg[15:0] control = 16'b0010000000000000;
   
  wire good_to_reset_go, send_complete; 
  wire[31:0] freq_cxn;
+ reg[27:0] r_freq_cxn = 28'b0;
  
   
 //=======================================================
@@ -124,7 +126,7 @@ assign fpga_clk_50 = FPGA_CLK1_50;
 assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_buttons};
 */
 
-/*ad9833if u0 
+ad9833if u0 
   (
   .clk(FPGA_CLK1_50),
   .go(go),
@@ -135,7 +137,7 @@ assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_button
 	  .fsync(fsync),
   .sclk(sclk),
   .sdata(sdata)
-  );*/
+  );
 
 
     freq_system u1 (
@@ -170,22 +172,41 @@ assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_button
                .freq1_writedata                  (SW[3:0])                   //  leds2.readdata
     );
 
-	 /*always @(posedge FPGA_CLK1_50)
+  
+  //always @(freq_cxn)
+  //begin
+	//   go <= 1;
+  //end
+  
+  always @(posedge FPGA_CLK1_50)
   begin
-    if(good_to_reset_go == 1) 
-	   go <= 0;
-		
-	if(r_freq_cxn != freq_cxn) 
+  
+    if (freq_cxn[27:0] != r_freq_cxn[27:0])
+	 begin
 	   go <= 1;
-    
-  end*/
+		r_freq_cxn[27:0] <= freq_cxn[27:0];
+	 end
+	 else
+	 begin
+	   if (good_to_reset_go != r_good_to_reset_go)
+	   begin
+	     if (good_to_reset_go == 1)
+		  begin
+		    go <= 0;
+		    r_good_to_reset_go <= 1;
+	     end
+		  else
+		    r_good_to_reset_go <= 0;
+	   end
+	 end
+  end
   
   
   assign fsync2 = fsync;
   assign sclk2 = sclk;
   assign sdata2 = sdata;
   
-  assign LED[7:0] = freq_cxn[7:0];
+  //assign LED[7:0] = freq_cxn[7:0];
   
   
 /*
