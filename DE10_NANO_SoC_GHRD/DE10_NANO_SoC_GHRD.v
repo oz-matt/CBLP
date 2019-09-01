@@ -101,6 +101,11 @@ module DE10_NANO_SoC_GHRD(
  wire[31:0] freq_cxn;
  reg[27:0] r_freq_cxn = 28'b0;
  
+  wire tria, saw, sine;
+  reg r_tria = 0;
+  reg r_saw = 0;
+  reg r_sine = 0;
+  
   
 //=======================================================
 //  REG/WIRE declarations
@@ -125,6 +130,14 @@ assign LED[7: 1] = fpga_led_internal;
 assign fpga_clk_50 = FPGA_CLK1_50;
 assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_buttons};
 */
+
+DacShapeBD u2(
+	.SW1(SW[0]),
+	.SW2(SW[1]),
+	.SINE(sine),
+	.SAW(saw),
+	.TRIA(tria)
+);
 
 ad9833if u0 
   (
@@ -180,6 +193,20 @@ ad9833if u0
   
   always @(posedge FPGA_CLK1_50)
   begin
+  
+  if (tria != r_tria)
+  begin
+    go <= 1;
+	 
+	 if (tria != r_tria)
+	 begin
+	   r_tria <= tria;
+		if (tria == 1)
+		  control <= 16'b0010000000000010;
+		else
+		  control <= 16'b0010000000000000;
+	 end
+  end
   
     if (freq_cxn[27:0] != r_freq_cxn[27:0])
 	 begin
