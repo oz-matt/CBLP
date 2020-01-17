@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/altera_reset_controller.v"
+   type="VERILOG"
+   library="rst_controller" />
+ <file
+   path="simulation/submodules/altera_reset_synchronizer.v"
+   type="VERILOG"
+   library="rst_controller" />
+ <file
+   path="simulation/submodules/altera_reset_controller.sdc"
+   type="SDC"
+   library="rst_controller" />
+ <file
+   path="simulation/submodules/qtest_onchip_memory2_0.hex"
+   type="HEX"
+   library="onchip_memory2_0" />
+ <file
+   path="simulation/submodules/qtest_onchip_memory2_0.v"
+   type="VERILOG"
+   library="onchip_memory2_0" />
+ <file path="simulation/qtest.v" type="VERILOG" />
+ <topLevel name="qtest" />
+ <deviceFamily name="cycloneivgx" />
+ <modelMap
+   controllerPath="qtest.onchip_memory2_0"
+   modelPath="qtest.onchip_memory2_0" />
+</simPackage>

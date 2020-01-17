@@ -1,0 +1,7 @@
+
+State Machine - |qtest|r_current_state
+Name r_current_state.IDLE_STATE_2 r_current_state.WRITE_STATE r_current_state.IDLE_STATE_1 r_current_state.READ_STATE 
+r_current_state.READ_STATE 0 0 0 0 
+r_current_state.IDLE_STATE_1 0 0 1 1 
+r_current_state.WRITE_STATE 0 1 0 1 
+r_current_state.IDLE_STATE_2 1 0 0 1 

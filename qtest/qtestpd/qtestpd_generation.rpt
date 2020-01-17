@@ -1,0 +1,77 @@
+Info: Starting: Create simulation model
+Info: qsys-generate D:\Cinna-BoN-FPGA\qtest\qtestpd.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=D:\Cinna-BoN-FPGA\qtest\qtestpd\simulation --family="Cyclone IV GX" --part=EP4CGX150DF31C7
+Progress: Loading qtest/qtestpd.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qtestpd: Generating qtestpd "qtestpd" for SIM_VERILOG
+Info: onchip_memory2_0: Starting RTL generation for module 'qtestpd_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=qtestpd_onchip_memory2_0 --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8278_5239910089684263767.dir/0002_onchip_memory2_0_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8278_5239910089684263767.dir/0002_onchip_memory2_0_gen//qtestpd_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8278_5239910089684263767.dir/0002_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0: Done RTL generation for module 'qtestpd_onchip_memory2_0'
+Info: onchip_memory2_0: "qtestpd" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: rst_controller: "qtestpd" instantiated altera_reset_controller "rst_controller"
+Info: qtestpd: Done "qtestpd" with 3 modules, 5 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=D:\Cinna-BoN-FPGA\qtest\qtestpd\qtestpd.spd --output-directory=D:/Cinna-BoN-FPGA/qtest/qtestpd/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=D:\Cinna-BoN-FPGA\qtest\qtestpd\qtestpd.spd --output-directory=D:/Cinna-BoN-FPGA/qtest/qtestpd/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in D:/Cinna-BoN-FPGA/qtest/qtestpd/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in D:/Cinna-BoN-FPGA/qtest/qtestpd/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in D:/Cinna-BoN-FPGA/qtest/qtestpd/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/Cinna-BoN-FPGA/qtest/qtestpd/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	2 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/Cinna-BoN-FPGA/qtest/qtestpd/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/Cinna-BoN-FPGA/qtest/qtestpd/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\Cinna-BoN-FPGA\qtest\qtestpd.qsys --block-symbol-file --output-directory=D:\Cinna-BoN-FPGA\qtest\qtestpd --family="Cyclone IV GX" --part=EP4CGX150DF31C7
+Progress: Loading qtest/qtestpd.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Cinna-BoN-FPGA\qtest\qtestpd.qsys --synthesis=VERILOG --output-directory=D:\Cinna-BoN-FPGA\qtest\qtestpd\synthesis --family="Cyclone IV GX" --part=EP4CGX150DF31C7
+Progress: Loading qtest/qtestpd.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qtestpd: Generating qtestpd "qtestpd" for QUARTUS_SYNTH
+Info: onchip_memory2_0: Starting RTL generation for module 'qtestpd_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=qtestpd_onchip_memory2_0 --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8278_5239910089684263767.dir/0005_onchip_memory2_0_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8278_5239910089684263767.dir/0005_onchip_memory2_0_gen//qtestpd_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'qtestpd_onchip_memory2_0'
+Info: onchip_memory2_0: "qtestpd" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: rst_controller: "qtestpd" instantiated altera_reset_controller "rst_controller"
+Info: qtestpd: Done "qtestpd" with 3 modules, 5 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

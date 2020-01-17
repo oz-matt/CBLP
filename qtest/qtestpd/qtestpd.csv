@@ -1,0 +1,22 @@
+# system info qtestpd on 2020.01.16.21:17:15
+system_info:
+name,value
+DEVICE,EP4CGX150DF31C7
+DEVICE_FAMILY,Cyclone IV GX
+GENERATION_ID,1579227435
+#
+#
+# Files generated for qtestpd on 2020.01.16.21:17:15
+files:
+filepath,kind,attributes,module,is_top
+simulation/qtestpd.v,VERILOG,,qtestpd,true
+simulation/submodules/qtestpd_onchip_memory2_0.v,VERILOG,,qtestpd_onchip_memory2_0,false
+simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+qtestpd.onchip_memory2_0,qtestpd_onchip_memory2_0
+qtestpd.rst_controller,altera_reset_controller
