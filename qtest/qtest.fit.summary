@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Jan 16 21:19:34 2020
+Fitter Status : Successful - Fri Jan 17 21:20:36 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : qtest
 Top-level Entity Name : qtest
 Family : Cyclone IV GX
 Device : EP4CGX150DF31C7
 Timing Models : Final
-Total logic elements : 114 / 149,760 ( < 1 % )
-    Total combinational functions : 114 / 149,760 ( < 1 % )
+Total logic elements : 107 / 149,760 ( < 1 % )
+    Total combinational functions : 107 / 149,760 ( < 1 % )
     Dedicated logic registers : 62 / 149,760 ( < 1 % )
 Total registers : 62
 Total pins : 121 / 508 ( 24 % )

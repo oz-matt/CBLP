@@ -1,5 +1,5 @@
 Fitter report for qtest
-Thu Jan 16 21:19:34 2020
+Fri Jan 17 21:20:36 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -70,15 +70,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Jan 16 21:19:34 2020       ;
+; Fitter Status                      ; Successful - Fri Jan 17 21:20:36 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; qtest                                       ;
 ; Top-level Entity Name              ; qtest                                       ;
 ; Family                             ; Cyclone IV GX                               ;
 ; Device                             ; EP4CGX150DF31C7                             ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 114 / 149,760 ( < 1 % )                     ;
-;     Total combinational functions  ; 114 / 149,760 ( < 1 % )                     ;
+; Total logic elements               ; 107 / 149,760 ( < 1 % )                     ;
+;     Total combinational functions  ; 107 / 149,760 ( < 1 % )                     ;
 ;     Dedicated logic registers      ; 62 / 149,760 ( < 1 % )                      ;
 ; Total registers                    ; 62                                          ;
 ; Total pins                         ; 121 / 508 ( 24 % )                          ;
@@ -165,25 +165,24 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processors 3-4         ;   0.1%      ;
+;     Processors 2-4         ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                                                                  ;
-+---------------------+-----------------+------------------+---------------------+-----------+----------------+----------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
-; Node                ; Action          ; Operation        ; Reason              ; Node Port ; Node Port Name ; Destination Node                                                                                                     ; Destination Port ; Destination Port Name ;
-+---------------------+-----------------+------------------+---------------------+-----------+----------------+----------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
-; M10K_data_buffer[0] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|q_a[0] ; PORTADATAOUT     ;                       ;
-; M10K_data_buffer[1] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|q_a[1] ; PORTADATAOUT     ;                       ;
-; M10K_data_buffer[2] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|q_a[2] ; PORTADATAOUT     ;                       ;
-; M10K_data_buffer[3] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|q_a[3] ; PORTADATAOUT     ;                       ;
-; M10K_data_buffer[4] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|q_a[4] ; PORTADATAOUT     ;                       ;
-; M10K_data_buffer[5] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|q_a[5] ; PORTADATAOUT     ;                       ;
-; M10K_data_buffer[6] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|q_a[6] ; PORTADATAOUT     ;                       ;
-; M10K_data_buffer[7] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|q_a[7] ; PORTADATAOUT     ;                       ;
-+---------------------+-----------------+------------------+---------------------+-----------+----------------+----------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                                                                    ;
++----------------------+-----------------+------------------+---------------------+-----------+----------------+-----------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
+; Node                 ; Action          ; Operation        ; Reason              ; Node Port ; Node Port Name ; Destination Node                                                                                                      ; Destination Port ; Destination Port Name ;
++----------------------+-----------------+------------------+---------------------+-----------+----------------+-----------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
+; M10K_data_buffer[8]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_b[8]  ; PORTBDATAOUT     ;                       ;
+; M10K_data_buffer[9]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_b[9]  ; PORTBDATAOUT     ;                       ;
+; M10K_data_buffer[10] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_b[10] ; PORTBDATAOUT     ;                       ;
+; M10K_data_buffer[11] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_b[11] ; PORTBDATAOUT     ;                       ;
+; M10K_data_buffer[12] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_b[12] ; PORTBDATAOUT     ;                       ;
+; M10K_data_buffer[13] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_b[13] ; PORTBDATAOUT     ;                       ;
+; M10K_data_buffer[14] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_b[14] ; PORTBDATAOUT     ;                       ;
+; M10K_data_buffer[15] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_b[15] ; PORTBDATAOUT     ;                       ;
++----------------------+-----------------+------------------+---------------------+-----------+----------------+-----------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -192,8 +191,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 454 ) ; 0.00 % ( 0 / 454 )         ; 0.00 % ( 0 / 454 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 454 ) ; 0.00 % ( 0 / 454 )         ; 0.00 % ( 0 / 454 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 447 ) ; 0.00 % ( 0 / 447 )         ; 0.00 % ( 0 / 447 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 447 ) ; 0.00 % ( 0 / 447 )         ; 0.00 % ( 0 / 447 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -216,7 +215,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 444 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 437 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -227,59 +226,59 @@ refer to the applicable agreement for further details.
 The pin-out file can be found in D:/Cinna-BoN-FPGA/qtest/qtest.pin.
 
 
-+---------------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                             ;
-+---------------------------------------------+-----------------------------+
-; Resource                                    ; Usage                       ;
-+---------------------------------------------+-----------------------------+
-; Total logic elements                        ; 114 / 149,760 ( < 1 % )     ;
-;     -- Combinational with no register       ; 52                          ;
-;     -- Register only                        ; 0                           ;
-;     -- Combinational with a register        ; 62                          ;
-;                                             ;                             ;
-; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 42                          ;
-;     -- 3 input functions                    ; 10                          ;
-;     -- <=2 input functions                  ; 62                          ;
-;     -- Register only                        ; 0                           ;
-;                                             ;                             ;
-; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 58                          ;
-;     -- arithmetic mode                      ; 56                          ;
-;                                             ;                             ;
-; Total registers*                            ; 62 / 152,165 ( < 1 % )      ;
-;     -- Dedicated logic registers            ; 62 / 149,760 ( < 1 % )      ;
-;     -- I/O registers                        ; 0 / 2,405 ( 0 % )           ;
-;                                             ;                             ;
-; Total LABs:  partially or completely used   ; 9 / 9,360 ( < 1 % )         ;
-; Virtual pins                                ; 0                           ;
-; I/O pins                                    ; 121 / 508 ( 24 % )          ;
-;     -- Clock pins                           ; 3 / 10 ( 30 % )             ;
-;     -- Dedicated input pins                 ; 0 / 25 ( 0 % )              ;
-;                                             ;                             ;
-; M9Ks                                        ; 1 / 720 ( < 1 % )           ;
-; Total block memory bits                     ; 32 / 6,635,520 ( < 1 % )    ;
-; Total block memory implementation bits      ; 9,216 / 6,635,520 ( < 1 % ) ;
-; Embedded Multiplier 9-bit elements          ; 0 / 720 ( 0 % )             ;
-; PLLs                                        ; 0 / 8 ( 0 % )               ;
-; Global signals                              ; 1                           ;
-;     -- Global clocks                        ; 1 / 30 ( 3 % )              ;
-; JTAGs                                       ; 0 / 1 ( 0 % )               ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )               ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )               ;
-; Oscillator blocks                           ; 0 / 1 ( 0 % )               ;
-; GXB Receiver channel PCSs                   ; 0 / 8 ( 0 % )               ;
-; GXB Receiver channel PMAs                   ; 0 / 8 ( 0 % )               ;
-; GXB Transmitter channel PCSs                ; 0 / 8 ( 0 % )               ;
-; GXB Transmitter channel PMAs                ; 0 / 8 ( 0 % )               ;
-; Impedance control blocks                    ; 0 / 3 ( 0 % )               ;
-; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%          ;
-; Peak interconnect usage (total/H/V)         ; 0.9% / 0.8% / 1.0%          ;
-; Maximum fan-out                             ; 63                          ;
-; Highest non-global fan-out                  ; 32                          ;
-; Total fan-out                               ; 681                         ;
-; Average fan-out                             ; 1.55                        ;
-+---------------------------------------------+-----------------------------+
++----------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                              ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Total logic elements                        ; 107 / 149,760 ( < 1 % )      ;
+;     -- Combinational with no register       ; 45                           ;
+;     -- Register only                        ; 0                            ;
+;     -- Combinational with a register        ; 62                           ;
+;                                             ;                              ;
+; Logic element usage by number of LUT inputs ;                              ;
+;     -- 4 input functions                    ; 36                           ;
+;     -- 3 input functions                    ; 10                           ;
+;     -- <=2 input functions                  ; 61                           ;
+;     -- Register only                        ; 0                            ;
+;                                             ;                              ;
+; Logic elements by mode                      ;                              ;
+;     -- normal mode                          ; 51                           ;
+;     -- arithmetic mode                      ; 56                           ;
+;                                             ;                              ;
+; Total registers*                            ; 62 / 152,165 ( < 1 % )       ;
+;     -- Dedicated logic registers            ; 62 / 149,760 ( < 1 % )       ;
+;     -- I/O registers                        ; 0 / 2,405 ( 0 % )            ;
+;                                             ;                              ;
+; Total LABs:  partially or completely used   ; 9 / 9,360 ( < 1 % )          ;
+; Virtual pins                                ; 0                            ;
+; I/O pins                                    ; 121 / 508 ( 24 % )           ;
+;     -- Clock pins                           ; 3 / 10 ( 30 % )              ;
+;     -- Dedicated input pins                 ; 0 / 25 ( 0 % )               ;
+;                                             ;                              ;
+; M9Ks                                        ; 2 / 720 ( < 1 % )            ;
+; Total block memory bits                     ; 32 / 6,635,520 ( < 1 % )     ;
+; Total block memory implementation bits      ; 18,432 / 6,635,520 ( < 1 % ) ;
+; Embedded Multiplier 9-bit elements          ; 0 / 720 ( 0 % )              ;
+; PLLs                                        ; 0 / 8 ( 0 % )                ;
+; Global signals                              ; 1                            ;
+;     -- Global clocks                        ; 1 / 30 ( 3 % )               ;
+; JTAGs                                       ; 0 / 1 ( 0 % )                ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )                ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )                ;
+; Oscillator blocks                           ; 0 / 1 ( 0 % )                ;
+; GXB Receiver channel PCSs                   ; 0 / 8 ( 0 % )                ;
+; GXB Receiver channel PMAs                   ; 0 / 8 ( 0 % )                ;
+; GXB Transmitter channel PCSs                ; 0 / 8 ( 0 % )                ;
+; GXB Transmitter channel PMAs                ; 0 / 8 ( 0 % )                ;
+; Impedance control blocks                    ; 0 / 3 ( 0 % )                ;
+; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%           ;
+; Peak interconnect usage (total/H/V)         ; 0.6% / 0.6% / 0.7%           ;
+; Maximum fan-out                             ; 73                           ;
+; Highest non-global fan-out                  ; 73                           ;
+; Total fan-out                               ; 662                          ;
+; Average fan-out                             ; 1.53                         ;
++---------------------------------------------+------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
@@ -291,19 +290,19 @@ The pin-out file can be found in D:/Cinna-BoN-FPGA/qtest/qtest.pin.
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 114 / 149760 ( < 1 % ) ; 0 / 149760 ( 0 % )             ;
-;     -- Combinational with no register       ; 52                     ; 0                              ;
+; Total logic elements                        ; 107 / 149760 ( < 1 % ) ; 0 / 149760 ( 0 % )             ;
+;     -- Combinational with no register       ; 45                     ; 0                              ;
 ;     -- Register only                        ; 0                      ; 0                              ;
 ;     -- Combinational with a register        ; 62                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 42                     ; 0                              ;
+;     -- 4 input functions                    ; 36                     ; 0                              ;
 ;     -- 3 input functions                    ; 10                     ; 0                              ;
-;     -- <=2 input functions                  ; 62                     ; 0                              ;
+;     -- <=2 input functions                  ; 61                     ; 0                              ;
 ;     -- Register only                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 58                     ; 0                              ;
+;     -- normal mode                          ; 51                     ; 0                              ;
 ;     -- arithmetic mode                      ; 56                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Total registers                             ; 62                     ; 0                              ;
@@ -316,8 +315,8 @@ The pin-out file can be found in D:/Cinna-BoN-FPGA/qtest/qtest.pin.
 ; I/O pins                                    ; 121                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 720 ( 0 % )        ; 0 / 720 ( 0 % )                ;
 ; Total memory bits                           ; 32                     ; 0                              ;
-; Total RAM block bits                        ; 9216                   ; 0                              ;
-; M9K                                         ; 1 / 720 ( < 1 % )      ; 0 / 720 ( 0 % )                ;
+; Total RAM block bits                        ; 18432                  ; 0                              ;
+; M9K                                         ; 2 / 720 ( < 1 % )      ; 0 / 720 ( 0 % )                ;
 ; Clock control block                         ; 1 / 38 ( 2 % )         ; 0 / 38 ( 0 % )                 ;
 ;                                             ;                        ;                                ;
 ; Connections                                 ;                        ;                                ;
@@ -327,8 +326,8 @@ The pin-out file can be found in D:/Cinna-BoN-FPGA/qtest/qtest.pin.
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 677                    ; 5                              ;
-;     -- Registered Connections               ; 198                    ; 0                              ;
+;     -- Total Connections                    ; 699                    ; 5                              ;
+;     -- Registered Connections               ; 188                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 18                     ; 0                              ;
@@ -362,7 +361,7 @@ The pin-out file can be found in D:/Cinna-BoN-FPGA/qtest/qtest.pin.
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; CLOCK2_50 ; A15   ; 7        ; 57           ; 91           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; CLOCK3_50 ; V11   ; 3B       ; 7            ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; CLOCK_50  ; AJ16  ; 4        ; 57           ; 0            ; 7            ; 63                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; CLOCK_50  ; AJ16  ; 4        ; 57           ; 0            ; 7            ; 64                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[0]    ; AA26  ; 5        ; 117          ; 14           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1]    ; AE25  ; 5        ; 117          ; 10           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[2]    ; AF30  ; 5        ; 117          ; 17           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
@@ -1561,11 +1560,11 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                        ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                  ; Entity Name              ; Library Name ;
 +---------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |qtest                                            ; 114 (114)   ; 62 (62)                   ; 0 (0)         ; 32          ; 1    ; 0            ; 0       ; 0         ; 0         ; 121  ; 0            ; 52 (52)      ; 0 (0)             ; 62 (62)          ; |qtest                                                                                                               ; qtest                    ; work         ;
-;    |qtestpd:u0|                                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32          ; 1    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |qtest|qtestpd:u0                                                                                                    ; qtestpd                  ; qtestpd      ;
-;       |qtestpd_onchip_memory2_0:onchip_memory2_0| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32          ; 1    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |qtest|qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0                                                          ; qtestpd_onchip_memory2_0 ; qtestpd      ;
-;          |altsyncram:the_altsyncram|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32          ; 1    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |qtest|qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram                                ; altsyncram               ; work         ;
-;             |altsyncram_hka1:auto_generated|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32          ; 1    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |qtest|qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated ; altsyncram_hka1          ; work         ;
+; |qtest                                            ; 107 (107)   ; 62 (62)                   ; 0 (0)         ; 32          ; 2    ; 0            ; 0       ; 0         ; 0         ; 121  ; 0            ; 45 (45)      ; 0 (0)             ; 62 (62)          ; |qtest                                                                                                               ; qtest                    ; work         ;
+;    |qtestpd:u0|                                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32          ; 2    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |qtest|qtestpd:u0                                                                                                    ; qtestpd                  ; qtestpd      ;
+;       |qtestpd_onchip_memory2_0:onchip_memory2_0| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32          ; 2    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |qtest|qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0                                                          ; qtestpd_onchip_memory2_0 ; qtestpd      ;
+;          |altsyncram:the_altsyncram|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32          ; 2    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |qtest|qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram                                ; altsyncram               ; work         ;
+;             |altsyncram_h312:auto_generated|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32          ; 2    ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |qtest|qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated ; altsyncram_h312          ; work         ;
 +---------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1741,18 +1740,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                    ;
-+-------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; Name                    ; Location            ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                ; PIN_AJ16            ; 63      ; Clock                     ; yes    ; Global Clock         ; GCLK28           ; --                        ;
-; LessThan0~6             ; LCCOMB_X113_Y7_N30  ; 27      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; LessThan10~8            ; LCCOMB_X112_Y38_N18 ; 32      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; M10K_data_buffer~1      ; LCCOMB_X111_Y37_N12 ; 1       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; M10K_write              ; FF_X111_Y37_N7      ; 2       ; Read enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; M10K_write_address[0]~7 ; LCCOMB_X111_Y37_N14 ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-+-------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                       ;
++-------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                    ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                ; PIN_AJ16            ; 64      ; Clock        ; yes    ; Global Clock         ; GCLK28           ; --                        ;
+; LessThan0~6             ; LCCOMB_X116_Y43_N2  ; 27      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; LessThan10~8            ; LCCOMB_X108_Y20_N16 ; 32      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; M10K_data_buffer~0      ; LCCOMB_X109_Y21_N12 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; M10K_write_address[0]~9 ; LCCOMB_X109_Y21_N14 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
++-------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1760,17 +1758,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLOCK_50 ; PIN_AJ16 ; 63      ; 0                                    ; Global Clock         ; GCLK28           ; --                        ;
+; CLOCK_50 ; PIN_AJ16 ; 64      ; 0                                    ; Global Clock         ; GCLK28           ; --                        ;
 +----------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
-+--------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; Name                                                                                                                     ; Type ; Mode        ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF  ; Location        ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
-+--------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; Single Clock ; 128          ; 8            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 1024 ; 4                           ; 8                           ; --                          ; --                          ; 32                  ; 1    ; None ; M9K_X110_Y37_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
-+--------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+-----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
++--------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
+; Name                                                                                                                     ; Type ; Mode           ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF  ; Location                         ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
++--------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
+; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; Single Clock ; 128          ; 64           ; 128          ; 64           ; yes                    ; no                      ; yes                    ; yes                     ; 8192 ; 4                           ; 8                           ; 4                           ; 8                           ; 32                  ; 2    ; None ; M9K_X110_Y20_N0, M9K_X110_Y21_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
++--------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+----------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
@@ -1779,29 +1777,29 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------------+------------------------+
 ; Routing Resource Type             ; Usage                  ;
 +-----------------------------------+------------------------+
-; Block interconnects               ; 88 / 445,464 ( < 1 % ) ;
-; C16 interconnects                 ; 2 / 12,402 ( < 1 % )   ;
-; C4 interconnects                  ; 39 / 263,952 ( < 1 % ) ;
-; Direct links                      ; 26 / 445,464 ( < 1 % ) ;
+; Block interconnects               ; 96 / 445,464 ( < 1 % ) ;
+; C16 interconnects                 ; 3 / 12,402 ( < 1 % )   ;
+; C4 interconnects                  ; 68 / 263,952 ( < 1 % ) ;
+; Direct links                      ; 39 / 445,464 ( < 1 % ) ;
 ; GXB block output buffers          ; 0 / 3,600 ( 0 % )      ;
 ; Global clocks                     ; 1 / 30 ( 3 % )         ;
 ; Interquad Reference Clock Outputs ; 0 / 2 ( 0 % )          ;
 ; Interquad TXRX Clocks             ; 0 / 16 ( 0 % )         ;
 ; Interquad TXRX PCSRX outputs      ; 0 / 8 ( 0 % )          ;
 ; Interquad TXRX PCSTX outputs      ; 0 / 8 ( 0 % )          ;
-; Local interconnects               ; 91 / 149,760 ( < 1 % ) ;
-; R24 interconnects                 ; 1 / 12,690 ( < 1 % )   ;
-; R4 interconnects                  ; 47 / 370,260 ( < 1 % ) ;
+; Local interconnects               ; 82 / 149,760 ( < 1 % ) ;
+; R24 interconnects                 ; 0 / 12,690 ( 0 % )     ;
+; R4 interconnects                  ; 42 / 370,260 ( < 1 % ) ;
 +-----------------------------------+------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 12.67) ; Number of LABs  (Total = 9) ;
+; Number of Logic Elements  (Average = 11.89) ; Number of LABs  (Total = 9) ;
 +---------------------------------------------+-----------------------------+
-; 1                                           ; 2                           ;
-; 2                                           ; 0                           ;
+; 1                                           ; 1                           ;
+; 2                                           ; 1                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
@@ -1811,21 +1809,21 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
+; 12                                          ; 1                           ;
+; 13                                          ; 1                           ;
 ; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 7                           ;
+; 15                                          ; 1                           ;
+; 16                                          ; 4                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 9) ;
+; LAB-wide Signals  (Average = 1.11) ; Number of LABs  (Total = 9) ;
 +------------------------------------+-----------------------------+
 ; 1 Clock                            ; 6                           ;
-; 1 Sync. clear                      ; 1                           ;
+; 1 Sync. clear                      ; 2                           ;
 ; 1 Sync. load                       ; 2                           ;
 +------------------------------------+-----------------------------+
 
@@ -1833,12 +1831,12 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 19.56) ; Number of LABs  (Total = 9) ;
+; Number of Signals Sourced  (Average = 18.78) ; Number of LABs  (Total = 9) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 1                           ;
-; 2                                            ; 1                           ;
-; 3                                            ; 0                           ;
+; 2                                            ; 0                           ;
+; 3                                            ; 1                           ;
 ; 4                                            ; 0                           ;
 ; 5                                            ; 0                           ;
 ; 6                                            ; 0                           ;
@@ -1847,14 +1845,14 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
-; 12                                           ; 0                           ;
-; 13                                           ; 0                           ;
+; 12                                           ; 1                           ;
+; 13                                           ; 1                           ;
 ; 14                                           ; 0                           ;
 ; 15                                           ; 0                           ;
-; 16                                           ; 2                           ;
+; 16                                           ; 0                           ;
 ; 17                                           ; 0                           ;
-; 18                                           ; 0                           ;
-; 19                                           ; 1                           ;
+; 18                                           ; 1                           ;
+; 19                                           ; 0                           ;
 ; 20                                           ; 0                           ;
 ; 21                                           ; 0                           ;
 ; 22                                           ; 0                           ;
@@ -1874,18 +1872,18 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 6.89) ; Number of LABs  (Total = 9) ;
+; Number of Signals Sourced Out  (Average = 7.00) ; Number of LABs  (Total = 9) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 3                           ;
-; 2                                               ; 0                           ;
+; 1                                               ; 2                           ;
+; 2                                               ; 1                           ;
 ; 3                                               ; 0                           ;
-; 4                                               ; 1                           ;
+; 4                                               ; 0                           ;
 ; 5                                               ; 1                           ;
 ; 6                                               ; 0                           ;
-; 7                                               ; 0                           ;
-; 8                                               ; 0                           ;
-; 9                                               ; 2                           ;
+; 7                                               ; 2                           ;
+; 8                                               ; 1                           ;
+; 9                                               ; 0                           ;
 ; 10                                              ; 0                           ;
 ; 11                                              ; 0                           ;
 ; 12                                              ; 0                           ;
@@ -1899,33 +1897,32 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 8.11) ; Number of LABs  (Total = 9) ;
+; Number of Distinct Inputs  (Average = 8.33) ; Number of LABs  (Total = 9) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
-; 2                                           ; 1                           ;
-; 3                                           ; 1                           ;
-; 4                                           ; 3                           ;
-; 5                                           ; 0                           ;
+; 2                                           ; 0                           ;
+; 3                                           ; 2                           ;
+; 4                                           ; 1                           ;
+; 5                                           ; 1                           ;
 ; 6                                           ; 1                           ;
 ; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
-; 10                                          ; 1                           ;
+; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
+; 13                                          ; 1                           ;
 ; 14                                          ; 0                           ;
 ; 15                                          ; 0                           ;
-; 16                                          ; 1                           ;
+; 16                                          ; 0                           ;
 ; 17                                          ; 0                           ;
-; 18                                          ; 0                           ;
+; 18                                          ; 1                           ;
 ; 19                                          ; 0                           ;
 ; 20                                          ; 0                           ;
 ; 21                                          ; 0                           ;
 ; 22                                          ; 0                           ;
-; 23                                          ; 0                           ;
-; 24                                          ; 1                           ;
+; 23                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -2164,9 +2161,10 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register       ; Destination Register                                                                                                                          ; Delay Added in ns ;
 +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-; M10K_write_address[1] ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|ram_block1a0~porta_address_reg0 ; 0.222             ;
+; M10K_read_address[0]  ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|ram_block1a9~portb_address_reg0 ; 0.242             ;
+; M10K_write_address[0] ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|ram_block1a9~porta_address_reg0 ; 0.239             ;
 +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 2 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2217,12 +2215,12 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X106_Y34 to location X117_Y45
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X106_Y11 to location X117_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.07 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2252,10 +2250,10 @@ Warning (169064): Following 9 pins have no output enable or a GND or VCC output 
     Info (169065): Pin FAN_CTRL has a permanently disabled output enable File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 42
 Info (144001): Generated suppressed messages file D:/Cinna-BoN-FPGA/qtest/qtest.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1623 megabytes
-    Info: Processing ended: Thu Jan 16 21:19:34 2020
+    Info: Peak virtual memory: 1631 megabytes
+    Info: Processing ended: Fri Jan 17 21:20:36 2020
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +----------------------------+

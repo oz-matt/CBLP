@@ -3,10 +3,11 @@
 preplace inst qtestpd.clk_0 -pg 1 -lvl 1 -y 30
 preplace inst qtestpd -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst qtestpd.onchip_memory2_0 -pg 1 -lvl 2 -y 30
-preplace netloc EXPORT<net_container>qtestpd</net_container>(SLAVE)onchip_memory2_0.s1,(SLAVE)qtestpd.onchip_memory2_0_s1) 1 0 2 NJ 120 NJ
 preplace netloc POINT_TO_POINT<net_container>qtestpd</net_container>(MASTER)clk_0.clk,(SLAVE)onchip_memory2_0.clk1) 1 1 1 N
-preplace netloc EXPORT<net_container>qtestpd</net_container>(SLAVE)qtestpd.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>qtestpd</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)qtestpd.reset) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>qtestpd</net_container>(MASTER)clk_0.clk_reset,(SLAVE)onchip_memory2_0.reset1) 1 1 1 N
+preplace netloc EXPORT<net_container>qtestpd</net_container>(SLAVE)qtestpd.onchip_memory2_0_s2,(SLAVE)onchip_memory2_0.s2) 1 0 2 NJ 120 NJ
+preplace netloc EXPORT<net_container>qtestpd</net_container>(SLAVE)qtestpd.onchip_memory2_0_s1,(SLAVE)onchip_memory2_0.s1) 1 0 2 NJ 100 NJ
+preplace netloc EXPORT<net_container>qtestpd</net_container>(SLAVE)qtestpd.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>qtestpd</net_container>(SLAVE)clk_0.clk_in,(SLAVE)qtestpd.clk) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>qtestpd</net_container>(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset) 1 1 1 N
 levelinfo -pg 1 0 130 570
 levelinfo -hier qtestpd 140 170 450 560

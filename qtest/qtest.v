@@ -72,7 +72,7 @@ begin
 	end  
 end
 
-assign LEDG[0] = led;
+assign LEDR[0] = led;
 
 assign PCIE_WAKE_N = 1'b1;	 // 07/30/2013, pull-high to avoid system reboot after power off
 
@@ -129,8 +129,8 @@ reg wbit = 0;
   end*/
   
   // controls for M10K block just below
-wire [7:0] M10K_read_data ;
-reg [7:0] M10K_data_buffer, M10K_write_data ;
+wire [63:0] M10K_read_data ;
+reg [63:0] M10K_data_buffer, M10K_write_data ;
 reg [6:0] M10K_read_address, M10K_write_address ; 
 reg M10K_write ;
 
@@ -170,9 +170,9 @@ begin
   else
   if (clk_ctr >= 0)
   begin
-    M10K_write_data <= 8'hFF;
+    M10K_write_data <= 64'h11111111111111CC;
 	 M10K_write_address <= 0;
-	 //M10K_read_address <= 0;
+	 M10K_read_address <= 0;
 	 M10K_write <= 0;
   end
   
@@ -184,7 +184,7 @@ begin
   else
   if (clk_ctr >= 35)
   begin
-    //M10K_read_address <= 1;
+    M10K_read_address <= 1;
 	 M10K_write_address <= 0;
   end
   else
@@ -195,7 +195,7 @@ begin
   else
   if (clk_ctr >= 25)
   begin
-	 //M10K_read_address <= 0;
+	 M10K_read_address <= 0;
 	 M10K_write_address <= 0;
 	 M10K_write <= 0;
   end
@@ -273,30 +273,30 @@ end
         .onchip_memory2_0_s1_address    (M10K_write_address),    // onchip_memory2_0_s1.address
         .onchip_memory2_0_s1_clken      (1),      //                    .clken
         .onchip_memory2_0_s1_chipselect (1), //                    .chipselect
-        .onchip_memory2_0_s1_write      (M10K_write),      //                    .write
-        .onchip_memory2_0_s1_readdata   (M10K_read_data),   //                    .readdata
+        .onchip_memory2_0_s1_write      (1),      //                    .write
+        .onchip_memory2_0_s1_readdata   (),   //                    .readdata
         .onchip_memory2_0_s1_writedata  (M10K_write_data),  //                    .writedata
-        //.onchip_memory2_0_s1_byteenable (), //                    .byteenable
+        .onchip_memory2_0_s1_byteenable (8'hFF), //                    .byteenable
 		  
 		  
-		  //.onchip_memory2_0_s2_address    (addy1),    // onchip_memory2_0_s2.address
-        //.onchip_memory2_0_s2_chipselect (0), //                    .chipselect
-        //.onchip_memory2_0_s2_clken      (1),      //                    .clken
-       // .onchip_memory2_0_s2_write      (0),      //                    .write
-       // .onchip_memory2_0_s2_readdata   (readdata2),   //                    .readda
-      //  .onchip_memory2_0_s2_writedata  (wdata),  //                    .writedata
-        //.onchip_memory2_0_s2_byteenable (), //                    .byteenable
+		  .onchip_memory2_0_s2_address    (M10K_read_address),    // onchip_memory2_0_s2.address
+        .onchip_memory2_0_s2_chipselect (1), //                    .chipselect
+        .onchip_memory2_0_s2_clken      (1),      //                    .clken
+        .onchip_memory2_0_s2_write      (0),      //                    .write
+        .onchip_memory2_0_s2_readdata   (M10K_read_data),   //                    .readda
+        .onchip_memory2_0_s2_writedata  (),  //                    .writedata
+        .onchip_memory2_0_s2_byteenable (8'hFF), //                    .byteenable
         .reset_reset_n                  (reset_n)                   //               reset.reset_n
     );
 
  
-	 assign LEDR[7:0] = M10K_data_buffer[7:0];
+	 assign LEDG[7:0] = M10K_data_buffer[15:8];
     //assign LEDR[15:8] = r_readdata[15:8];
 	 
 
 endmodule
 
-module single_clk_ram(
+/*module single_clk_ram(
 output reg [7:0] q,
 input [7:0] d,
 input [6:0] write_address, read_address,
@@ -309,3 +309,4 @@ mem[write_address] <= d;
 q <= mem[read_address]; // q doesn't get d in this clock cycle
 end
 endmodule
+*/

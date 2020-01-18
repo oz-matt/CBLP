@@ -1,5 +1,5 @@
 Analysis & Synthesis report for qtest
-Thu Jan 16 21:19:20 2020
+Fri Jan 17 21:20:22 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -18,7 +18,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated
+ 13. Source assignments for qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated
  14. Source assignments for qtestpd:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
  15. Source assignments for qtestpd:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
  16. Parameter Settings for User Entity Instance: qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram
@@ -59,13 +59,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 16 21:19:20 2020       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 17 21:20:22 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; qtest                                       ;
 ; Top-level Entity Name              ; qtest                                       ;
 ; Family                             ; Cyclone IV GX                               ;
-; Total logic elements               ; 122                                         ;
-;     Total combinational functions  ; 114                                         ;
+; Total logic elements               ; 115                                         ;
+;     Total combinational functions  ; 107                                         ;
 ;     Dedicated logic registers      ; 70                                          ;
 ; Total registers                    ; 70                                          ;
 ; Total pins                         ; 121                                         ;
@@ -202,7 +202,7 @@ refer to the applicable agreement for further details.
 ; altrom.inc                                               ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                ;         ;
 ; altram.inc                                               ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                ;         ;
 ; altdpram.inc                                             ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc              ;         ;
-; db/altsyncram_hka1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; D:/Cinna-BoN-FPGA/qtest/db/altsyncram_hka1.tdf                                   ;         ;
+; db/altsyncram_h312.tdf                                   ; yes             ; Auto-Generated Megafunction  ; D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf                                   ;         ;
 +----------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
 
 
@@ -218,8 +218,8 @@ refer to the applicable agreement for further details.
 ;                          ;                  ;
 ; Maximum fan-out node     ; CLOCK_50~input   ;
 ; Maximum fan-out          ; 78               ;
-; Total fan-out            ; 726              ;
-; Average fan-out          ; 1.64             ;
+; Total fan-out            ; 708              ;
+; Average fan-out          ; 1.62             ;
 +--------------------------+------------------+
 
 
@@ -228,22 +228,22 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                  ; Entity Name              ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |qtest                                            ; 114 (114)           ; 70 (70)                   ; 32          ; 0            ; 0       ; 0         ; 0         ; 121  ; 0            ; |qtest                                                                                                               ; qtest                    ; work         ;
+; |qtest                                            ; 107 (107)           ; 70 (70)                   ; 32          ; 0            ; 0       ; 0         ; 0         ; 121  ; 0            ; |qtest                                                                                                               ; qtest                    ; work         ;
 ;    |qtestpd:u0|                                   ; 0 (0)               ; 0 (0)                     ; 32          ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |qtest|qtestpd:u0                                                                                                    ; qtestpd                  ; qtestpd      ;
 ;       |qtestpd_onchip_memory2_0:onchip_memory2_0| ; 0 (0)               ; 0 (0)                     ; 32          ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |qtest|qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0                                                          ; qtestpd_onchip_memory2_0 ; qtestpd      ;
 ;          |altsyncram:the_altsyncram|              ; 0 (0)               ; 0 (0)                     ; 32          ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |qtest|qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram                                ; altsyncram               ; work         ;
-;             |altsyncram_hka1:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 32          ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |qtest|qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated ; altsyncram_hka1          ; work         ;
+;             |altsyncram_h312:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 32          ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |qtest|qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated ; altsyncram_h312          ; work         ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                        ;
-+--------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
-; Name                                                                                                                     ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
-+--------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
-; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 128          ; 8            ; --           ; --           ; 1024 ; None ;
-+--------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                           ;
++--------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                     ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++--------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
+; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; 128          ; 64           ; 128          ; 64           ; 8192 ; None ;
++--------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -262,10 +262,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; M10K_write_data[0..7]                  ; Stuck at VCC due to stuck port data_in ;
+; M10K_write_data[0..7,16..63]           ; Lost fanout                            ;
+; M10K_write_data[8]                     ; Stuck at VCC due to stuck port data_in ;
+; M10K_write_data[9..11]                 ; Stuck at GND due to stuck port data_in ;
+; M10K_write_data[12]                    ; Stuck at VCC due to stuck port data_in ;
+; M10K_write_data[13..15]                ; Stuck at GND due to stuck port data_in ;
+; M10K_read_address[1..5]                ; Merged with M10K_read_address[6]       ;
 ; M10K_write_address[3..6]               ; Merged with M10K_write_address[2]      ;
+; M10K_read_address[6]                   ; Stuck at GND due to stuck port data_in ;
 ; M10K_write_address[2]                  ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 13 ;                                        ;
+; Total Number of Removed Registers = 75 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -289,12 +295,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |qtest|M10K_read_address[0]  ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |qtest|M10K_write_address[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated ;
+; Source assignments for qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                     ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------------+
@@ -333,8 +340,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                    ;
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                  ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                         ;
-; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                                         ;
-; WIDTH_A                            ; 8                    ; Signed Integer                                                  ;
+; OPERATION_MODE                     ; BIDIR_DUAL_PORT      ; Untyped                                                         ;
+; WIDTH_A                            ; 64                   ; Signed Integer                                                  ;
 ; WIDTHAD_A                          ; 7                    ; Signed Integer                                                  ;
 ; NUMWORDS_A                         ; 128                  ; Signed Integer                                                  ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                         ;
@@ -343,27 +350,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                         ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                         ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                         ;
-; WIDTH_B                            ; 1                    ; Untyped                                                         ;
-; WIDTHAD_B                          ; 1                    ; Untyped                                                         ;
-; NUMWORDS_B                         ; 1                    ; Untyped                                                         ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                         ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                         ;
+; WIDTH_B                            ; 64                   ; Signed Integer                                                  ;
+; WIDTHAD_B                          ; 7                    ; Signed Integer                                                  ;
+; NUMWORDS_B                         ; 128                  ; Signed Integer                                                  ;
+; INDATA_REG_B                       ; CLOCK0               ; Untyped                                                         ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK0               ; Untyped                                                         ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                         ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                         ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                         ;
 ; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                         ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                         ;
+; BYTEENA_REG_B                      ; CLOCK0               ; Untyped                                                         ;
 ; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                         ;
 ; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                         ;
 ; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                         ;
 ; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                         ;
 ; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                         ;
 ; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                         ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                                         ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                         ;
+; WIDTH_BYTEENA_A                    ; 8                    ; Signed Integer                                                  ;
+; WIDTH_BYTEENA_B                    ; 8                    ; Signed Integer                                                  ;
 ; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                         ;
 ; BYTE_SIZE                          ; 8                    ; Signed Integer                                                  ;
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                         ;
-; READ_DURING_WRITE_MODE_PORT_A      ; DONT_CARE            ; Untyped                                                         ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                         ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                         ;
 ; INIT_FILE                          ; UNUSED               ; Untyped                                                         ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                         ;
@@ -378,7 +385,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                         ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                         ;
 ; DEVICE_FAMILY                      ; Cyclone IV GX        ; Untyped                                                         ;
-; CBXI_PARAMETER                     ; altsyncram_hka1      ; Untyped                                                         ;
+; CBXI_PARAMETER                     ; altsyncram_h312      ; Untyped                                                         ;
 +------------------------------------+----------------------+-----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -445,13 +452,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+--------------------------------------------------------------------------------+
 ; Number of entity instances                ; 1                                                                              ;
 ; Entity Instance                           ; qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                    ;
-;     -- WIDTH_A                            ; 8                                                                              ;
+;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                                                ;
+;     -- WIDTH_A                            ; 64                                                                             ;
 ;     -- NUMWORDS_A                         ; 128                                                                            ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                   ;
-;     -- WIDTH_B                            ; 1                                                                              ;
-;     -- NUMWORDS_B                         ; 1                                                                              ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                         ;
+;     -- WIDTH_B                            ; 64                                                                             ;
+;     -- NUMWORDS_B                         ; 128                                                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                         ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                   ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                           ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                      ;
@@ -512,22 +519,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+---------------------------------------------------+
 ; Port      ; Type  ; Severity ; Details                                           ;
 +-----------+-------+----------+---------------------------------------------------+
-; reset_req ; Input ; Info     ; Stuck at GND                                      ;
 ; freeze    ; Input ; Info     ; Stuck at GND                                      ;
+; reset_req ; Input ; Info     ; Stuck at GND                                      ;
 +-----------+-------+----------+---------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "qtestpd:u0"                                                                                                                                                                                                     ;
-+------------------------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port                               ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+------------------------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; onchip_memory2_0_s1_clken          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; onchip_memory2_0_s1_clken[-1]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; onchip_memory2_0_s1_chipselect     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; onchip_memory2_0_s1_chipselect[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset_reset_n                      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+------------------------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "qtestpd:u0"                                                                                                                                                                                                        ;
++--------------------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                                 ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------------------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; onchip_memory2_0_s1_clken            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; onchip_memory2_0_s1_clken[-1]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; onchip_memory2_0_s1_chipselect       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; onchip_memory2_0_s1_chipselect[-1]   ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; onchip_memory2_0_s1_write            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; onchip_memory2_0_s1_write[-1]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; onchip_memory2_0_s1_readdata         ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
+; onchip_memory2_0_s1_byteenable       ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; onchip_memory2_0_s2_chipselect       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; onchip_memory2_0_s2_chipselect[-1]   ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; onchip_memory2_0_s2_clken            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; onchip_memory2_0_s2_clken[-1]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; onchip_memory2_0_s2_write            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; onchip_memory2_0_s2_write[-1]        ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; onchip_memory2_0_s2_readdata[63..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; onchip_memory2_0_s2_readdata[7..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; onchip_memory2_0_s2_writedata        ; Input  ; Info     ; Explicitly unconnected                                                                                                                                                             ;
+; onchip_memory2_0_s2_byteenable       ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; reset_reset_n                        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------------------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -542,19 +563,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 32                          ;
 ;     plain             ; 2                           ;
 ; cycloneiii_io_obuf    ; 9                           ;
-; cycloneiii_lcell_comb ; 115                         ;
+; cycloneiii_lcell_comb ; 108                         ;
 ;     arith             ; 56                          ;
 ;         2 data inputs ; 56                          ;
-;     normal            ; 59                          ;
+;     normal            ; 52                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 3                           ;
+;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 10                          ;
-;         4 data inputs ; 42                          ;
+;         4 data inputs ; 36                          ;
 ; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.63                        ;
+; Average LUT depth     ; 3.55                        ;
 +-----------------------+-----------------------------+
 
 
@@ -573,13 +594,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jan 16 21:19:10 2020
+    Info: Processing started: Fri Jan 17 21:20:11 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off qtest -c qtest
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 2 entities, in source file qtest.v
+Info (12021): Found 1 design units, including 1 entities, in source file qtest.v
     Info (12023): Found entity 1: qtest File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 6
-    Info (12023): Found entity 2: single_clk_ram File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 299
 Info (12021): Found 1 design units, including 1 entities, in source file qtestpd/synthesis/qtestpd.v
     Info (12023): Found entity 1: qtestpd File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/qtestpd.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file qtestpd/synthesis/submodules/altera_reset_controller.v
@@ -597,9 +617,10 @@ Warning (10036): Verilog HDL or VHDL warning at qtest.v(94): object "wdata2" ass
 Warning (10036): Verilog HDL or VHDL warning at qtest.v(97): object "wbit" assigned a value but never read File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 97
 Warning (10036): Verilog HDL or VHDL warning at qtest.v(99): object "addy1" assigned a value but never read File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 99
 Warning (10036): Verilog HDL or VHDL warning at qtest.v(100): object "addybuff" assigned a value but never read File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 100
+Warning (10036): Verilog HDL or VHDL warning at qtest.v(135): object "M10K_write" assigned a value but never read File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 135
 Warning (10230): Verilog HDL assignment warning at qtest.v(66): truncated value with size 32 to match size of target (26) File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 66
-Warning (10034): Output port "LEDG[8..1]" at qtest.v(14) has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 14
-Warning (10034): Output port "LEDR[17..8]" at qtest.v(15) has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
+Warning (10034): Output port "LEDG[8]" at qtest.v(14) has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 14
+Warning (10034): Output port "LEDR[17..1]" at qtest.v(15) has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
 Warning (10034): Output port "HEX1" at qtest.v(25) has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 25
 Warning (10034): Output port "HEX2" at qtest.v(26) has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 26
 Warning (10034): Output port "HEX3" at qtest.v(27) has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 27
@@ -612,28 +633,95 @@ Warning (10034): Output port "LCD_ON" at qtest.v(36) has no driver File: D:/Cinn
 Warning (10034): Output port "LCD_RS" at qtest.v(37) has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 37
 Warning (10034): Output port "LCD_RW" at qtest.v(38) has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 38
 Info (12128): Elaborating entity "qtestpd" for hierarchy "qtestpd:u0" File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 290
-Info (12128): Elaborating entity "qtestpd_onchip_memory2_0" for hierarchy "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0" File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/qtestpd.v Line: 30
-Info (12128): Elaborating entity "altsyncram" for hierarchy "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/submodules/qtestpd_onchip_memory2_0.v Line: 63
-Info (12130): Elaborated megafunction instantiation "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/submodules/qtestpd_onchip_memory2_0.v Line: 63
-Info (12133): Instantiated megafunction "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" with the following parameter: File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/submodules/qtestpd_onchip_memory2_0.v Line: 63
+Info (12128): Elaborating entity "qtestpd_onchip_memory2_0" for hierarchy "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0" File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/qtestpd.v Line: 46
+Info (12128): Elaborating entity "altsyncram" for hierarchy "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/submodules/qtestpd_onchip_memory2_0.v Line: 94
+Info (12130): Elaborated megafunction instantiation "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/submodules/qtestpd_onchip_memory2_0.v Line: 94
+Info (12133): Instantiated megafunction "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" with the following parameter: File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/submodules/qtestpd_onchip_memory2_0.v Line: 94
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
     Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK0"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK0"
     Info (12134): Parameter "init_file" = "UNUSED"
     Info (12134): Parameter "lpm_type" = "altsyncram"
     Info (12134): Parameter "maximum_depth" = "128"
     Info (12134): Parameter "numwords_a" = "128"
-    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "numwords_b" = "128"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
     Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
     Info (12134): Parameter "ram_block_type" = "AUTO"
     Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
-    Info (12134): Parameter "read_during_write_mode_port_a" = "DONT_CARE"
-    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_a" = "64"
+    Info (12134): Parameter "width_b" = "64"
+    Info (12134): Parameter "width_byteena_a" = "8"
+    Info (12134): Parameter "width_byteena_b" = "8"
     Info (12134): Parameter "widthad_a" = "7"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hka1.tdf
-    Info (12023): Found entity 1: altsyncram_hka1 File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_hka1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_hka1" for hierarchy "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated" File: d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "qtestpd:u0|altera_reset_controller:rst_controller" File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/qtestpd.v Line: 93
+    Info (12134): Parameter "widthad_b" = "7"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_h312.tdf
+    Info (12023): Found entity 1: altsyncram_h312 File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_h312" for hierarchy "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated" File: d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "qtestpd:u0|altera_reset_controller:rst_controller" File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/qtestpd.v Line: 109
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "qtestpd:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "qtestpd:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: D:/Cinna-BoN-FPGA/qtest/qtestpd/synthesis/submodules/altera_reset_controller.v Line: 220
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[0]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 45
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[1]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 82
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[2]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 119
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[3]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 156
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[4]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 193
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[5]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 230
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[6]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 267
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[7]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 304
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[16]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 637
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[17]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 674
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[18]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 711
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[19]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 748
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[20]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 785
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[21]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 822
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[22]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 859
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[23]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 896
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[24]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 933
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[25]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 970
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[26]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1007
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[27]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1044
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[28]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1081
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[29]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1118
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[30]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1155
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[31]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1192
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[32]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1229
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[33]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1266
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[34]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1303
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[35]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1340
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[36]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1377
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[37]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1414
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[38]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1451
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[39]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1488
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[40]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1525
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[41]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1562
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[42]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1599
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[43]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1636
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[44]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1673
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[45]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1710
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[46]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1747
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[47]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1784
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[48]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1821
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[49]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1858
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[50]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1895
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[51]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1932
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[52]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 1969
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[53]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 2006
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[54]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 2043
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[55]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 2080
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[56]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 2117
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[57]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 2154
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[58]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 2191
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[59]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 2228
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[60]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 2265
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[61]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 2302
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[62]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 2339
+        Warning (14320): Synthesized away node "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|q_a[63]" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 2376
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "LCD_DATA[0]" has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 34
@@ -645,14 +733,14 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "LCD_DATA[6]" has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 34
     Warning (13040): bidirectional pin "LCD_DATA[7]" has no driver File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 34
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDG[1]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 14
-    Warning (13410): Pin "LEDG[2]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 14
-    Warning (13410): Pin "LEDG[3]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 14
-    Warning (13410): Pin "LEDG[4]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 14
-    Warning (13410): Pin "LEDG[5]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 14
-    Warning (13410): Pin "LEDG[6]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 14
-    Warning (13410): Pin "LEDG[7]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 14
     Warning (13410): Pin "LEDG[8]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 14
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
     Warning (13410): Pin "LEDR[10]" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 15
@@ -724,7 +812,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LCD_RS" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 37
     Warning (13410): Pin "LCD_RW" is stuck at GND File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 38
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 5 MSB VCC or GND address nodes from RAM block "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_hka1:auto_generated|ALTSYNCRAM" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_hka1.tdf Line: 33
+Info (17049): 56 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 5 MSB VCC or GND address nodes from RAM block "qtestpd:u0|qtestpd_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_h312:auto_generated|ALTSYNCRAM" File: D:/Cinna-BoN-FPGA/qtest/db/altsyncram_h312.tdf Line: 39
 Info (144001): Generated suppressed messages file D:/Cinna-BoN-FPGA/qtest/qtest.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -753,17 +842,17 @@ Warning (21074): Design contains 24 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[15]" File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 21
     Warning (15610): No output dependent on input pin "SW[16]" File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 21
     Warning (15610): No output dependent on input pin "SW[17]" File: D:/Cinna-BoN-FPGA/qtest/qtest.v Line: 21
-Info (21057): Implemented 251 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 244 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 87 output pins
     Info (21060): Implemented 9 bidirectional pins
-    Info (21061): Implemented 122 logic cells
+    Info (21061): Implemented 115 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 137 warnings
-    Info: Peak virtual memory: 699 megabytes
-    Info: Processing ended: Thu Jan 16 21:19:20 2020
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:22
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 196 warnings
+    Info: Peak virtual memory: 700 megabytes
+    Info: Processing ended: Fri Jan 17 21:20:22 2020
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+

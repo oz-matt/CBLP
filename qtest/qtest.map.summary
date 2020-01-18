@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Jan 16 21:19:20 2020
+Analysis & Synthesis Status : Successful - Fri Jan 17 21:20:22 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : qtest
 Top-level Entity Name : qtest
 Family : Cyclone IV GX
-Total logic elements : 122
-    Total combinational functions : 114
+Total logic elements : 115
+    Total combinational functions : 107
     Dedicated logic registers : 70
 Total registers : 70
 Total pins : 121
